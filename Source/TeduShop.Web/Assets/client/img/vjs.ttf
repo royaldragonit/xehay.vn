@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js" lang="vi" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<!--<![endif]-->
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Kh&ocirc;ng t&igrave;m thấy nội dung | https://xehay.vn</title>
+<meta name="description" content="Xe Hay | Tin tức &ocirc; t&ocirc; xe m&aacute;y trong nước v&agrave; quốc tế. Những video v&agrave; b&agrave;i viết đ&aacute;nh gi&aacute; xe ch&acirc;n thực v&agrave; mới nhất ..."/>
+<meta name="keywords" content="đ&aacute;nh gi&aacute; xe, danh gia xe, xe hay, xehay, xehay.vn, ưu nhược điểm, so s&aacute;nh xe" />
+<meta name="author" content="xehay.vn" />
+<!-- Open Graph data -->
+<meta property="og:site_name" content="xehay.vn" />
+<meta property="og:type" content="Website" />
+<meta property="og:locale" content="vi_VN" />
+
+<meta property="fb:app_id" content="1614260038822406" />
+<!--<meta property="fb:admins" content="100005111372125" />-->
+
+<meta property="og:title" name="title" content="Kh&ocirc;ng t&igrave;m thấy nội dung | https://xehay.vn" />
+<meta property="og:description" content="Xe Hay | Tin tức &ocirc; t&ocirc; xe m&aacute;y trong nước v&agrave; quốc tế. Những video v&agrave; b&agrave;i viết đ&aacute;nh gi&aacute; xe ch&acirc;n thực v&agrave; mới nhất ..." />
+<meta property="og:url" content="https://xehay.vn/public/auto/css/font/vjs.ttf" />
+<meta property="og:image" content="https://xehay.vn/public/news/images/thumb/1.jpg" />
+<!-- HOME_INDEX -->    
+
+
+    <meta property="og:site_name" content="xehay.vn" />
+    <meta property="fb:pages" content="445089142275655" />
+    <meta content='xehay.vn' name='Author' />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-language" content="vi-vn" />
+    <meta http-equiv="cleartype" content="on" />
+    <link rel="shortcut icon" href="/uploads/files/xehay%20icon-01n.png" />
+
+    <link rel="stylesheet" href="/public/auto/css/pager.css" />
+    <script type="text/javascript" src="/public/auto/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/public/auto/js/jquery.yiiactiveform.js"></script>
+    <title>Xe Hay | Chuyên trang thông tin, đánh giá xe ô tô xe máy</title>
+
+    <link rel="stylesheet" href="/public/auto/css/normalize.min.css" />
+    <link rel="stylesheet" href="/public/auto/css/main.v4.min.css" />
+    <link rel="stylesheet" href="/public/auto/css/xehay.v52.min.css" />
+    <link rel="stylesheet" href="/public/auto/css/mobile.xehay.rev80.min.css" />
+    <link rel="stylesheet" href="/public/auto/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/public/auto/css/colorbox.css" />
+
+    <script src="/public/auto/js/jquery.easing.min.js"></script>
+    <script src="/public/auto/js/jquery.cookie.min.js"></script>
+    <script src="/public/auto/js/helper.min.js"></script>
+    <script src="/public/auto/js/jquery.dotdotdot.min.js"></script>
+    <script src="/public/auto/js/detect.min.js"></script>
+    <script src="/public/auto/js/main.v5.min.js"></script>
+
+    <script src="/public/auto/js/jquery.colorbox-min.js"></script>
+
+<script src="https://apis.google.com/js/platform.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics add 28-9-2021 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G6G8JC1JYC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G6G8JC1JYC');
+</script>
+
+
+    <style>
+
+/*29-11-2021*/
+
+@media  only screen and (min-width: 1220px){
+
+   /* body .container .body{ background: #fff!important; width: 1020px; padding: 10px 10px 0 10px; margin-top: 0; box-sizing: border-box;    float: left;}
+    header.header nav.menu, .home-middle{ width: 100%!important; }
+    body {background: url(/public/html5/ads/2021/T12/bgleft.jpg) no-repeat left bottom,url(/public/html5/ads/2021/T12/bgright.jpg) no-repeat right bottom #000; background-size: 25%; background-attachment: fixed; }
+    body .container{        width: 1020px;    margin: 0 auto;    overflow: unset;}*/
+}
+/*29-11-2021*/
+
+        .news-detail table td {
+            padding: 5px;
+        }
+        .headline-event ul li a {
+            color: #6fa2c3;
+            line-height: 17px;
+        }
+        .headline-event ul li {
+            margin-top: 3px;
+        }
+        .list-top-news .item li a {
+            color: #000;
+        }
+        .box .title a {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .vjs-poster {
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: contain;
+            cursor: pointer;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            width: 100%;
+        }
+        .top-ads:not(:empty) {
+            margin-top: 10px;
+        }
+        .not-desktop {
+            display: none;
+        }
+        @media  screen and (max-width: 960px) and (min-width: 715px) {
+            * {
+                font-size: 16px;
+            }
+            .home-middle .col-left {
+                width: 60%;
+            }
+            .home-middle .col-middle {
+                margin-right: 0;
+                width: 35%;
+            }
+        }
+        @media  screen and (max-width: 714px) {
+            * {
+                font-size: 16px;
+            }
+            .home-middle .col-left {
+                width: 95%;
+                border: 0;
+                padding-left: 10px;
+            }
+            .body .home-middle .col-middle {
+                margin-right: 0;
+                padding-right: 0;
+                border: 0;
+                width: 100%;
+            }
+            .not-desktop {
+                display: block;
+            }
+        }
+        .home-middle .col-left ul li img {
+            float: left;
+            margin-right: 8px;
+            margin-top: 3px;
+            margin-left: 1px;
+        }
+        ul.yiiPager a {
+            height: 17px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function scrollDownPage() {
+            var scr_height = screen.availHeight;
+            $('#mainpage').animate({
+                marginTop: scr_height + "px"
+            }, 1500);
+            setTimeout(function() {
+                $('#mainpage').animate({
+                    marginTop: "200px"
+                }, 1500);
+            }, 8000);
+        }
+
+        function scrollUpPage() {
+            $('#mainpage').animate({
+                marginTop: "200px"
+            }, 1500);
+        }
+    </script>
+
+    <!-- Chang URLs to wherever Video.js files will be hosted -->
+    <link href="/public/auto/css/video-js.v5.min.css" rel="stylesheet" type="text/css" />
+    <!-- video.js must be in the <head> for older IEs to work. -->
+    <script src="/public/auto/js/video.dev.min.js"></script>
+    <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
+    <script>videojs.options.flash.swf = "/videojs/video-js.swf";</script>
+    <style>
+        nav.menu ul li,
+        nav.menu ul li.active {
+            padding: 0 10px;
+        }
+        .banner-1000px {
+            margin: 6px auto !important;
+        }
+    </style>
+    <meta name="csrf-token" content="GNpMstFLyvx8MVXbanIMKRo9P7FfYJX5RITQBBS9" />
+    <script type="text/javascript">
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
+
+    <!-- BEGIN Universal Tracking  -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-61773696-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- END Universal Tracking -->
+
+     <!-- Start Alexa Certify Javascript -->
+    <script type="text/javascript">
+    _atrk_opts = { atrk_acct:"6gvJl1a8FRh27i", domain:"xehay.vn",dynamic: true};
+    (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+    </script>
+    <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=6gvJl1a8FRh27i" style="display:none" height="1" width="1" alt="" /></noscript>
+    <!-- End Alexa Certify Javascript -->  
+
+    <script type="text/javascript">
+    (function() {
+        var po = document.createElement("script");
+        po.type = "text/javascript";
+        po.async = true;
+        po.src = "https://apis.google.com/js/plusone.js?publisherid=115127963428178929415";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(po, s);
+    })();
+</script>
+
+<div id="fb-root"></div>
+<script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.4&appId=1614260038822406";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+
+
+</script>
+<script src="/popup_ads_video.js"></script>
+<!-- <script src="//vjs.zencdn.net/ie8/1.1.1/videojs-ie8.min.js"></script>
+<link href="//vjs.zencdn.net/5.4.6/video-js.min.css" rel="stylesheet">
+<script src="//vjs.zencdn.net/5.4.6/video.min.js"></script> -->
+<style>
+@media (max-width: 768px)
+{
+.destop{display: none !important}
+}
+
+.vcontroll{
+    position: absolute;
+    left: 0;
+    top: -25px;
+    height: 25px;
+    width: 175px;
+    text-align: right;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+}
+
+.vcontroll i.fa{  
+    cursor: pointer;   
+    color: #fff;
+    margin:0 8px;
+    line-height: 25px;
+    font-size: 16px;
+    font-style: normal !important;
+    z-index: 10000;
+     }
+</style>
+ 
+
+    <div class="vcontroll andytest">
+        <span class="vmini" title="Down" id="btnmini" data-status="open">
+            <i class="fa fa-chevron-down"></i></span>
+
+        <span class="vplaypause" title="Pause" id="btnplay" data-status="play">
+            <i class="fa fa-pause"></i></span>
+
+        <span class="vreplay" title="Replay" id="btnreplay" data-status="play">
+            <i class="fa fa-refresh"></i></span>
+        <span class="vzoom" title="Maximize - Minimize" data-status="on" id="btnzoom" >
+            <i class="fa fa-compress"></i></span>
+        <span class="vclose" style="color: #fff; padding-right: 8px; cursor: pointer; line-height: 25px;" title="Đóng Video này" id="btnclose" >Đóng</span>    
+<!--         
+        <span class="vmute" title="Mute" data-status="off" id="btnmute" >
+            <i class="fa fa-volume-off"></i></span>
+
+         -->
+    </div>
+</div>
+
+
+
+</head>
+<body class="xehay">
+
+
+
+<div class="container">
+
+    <div class="site-wrap clearfix" style="position: relative;">
+        <style>
+    .relative{position: relative;}
+    .floating-ads{  }
+    .fixed{ top: calc(50vh - 250px); position: absolute;   z-index: 999999999;  }    
+    .fixed img{ +height: 300px; }
+    .fixed-left{ left: -151px; }    .fixed-right{ right: -151px; }
+   /* @media (min-width: 1300px){ .fixed-left{left: -150px;}    .fixed-right{ right: -150px; } }
+    @media (max-width: 1299px){ .fixed-left{left: -130px;}    .fixed-right{ right: -130px; } }*/
+    @media (max-width: 1000px){ .fixed {display: none;} }
+</style>
+<!--   banner-floating-left-right -->
+        <div id="FloatLeftAds" class="floating-ads" style="position: absolute; left: -140px; top: 70px; z-index: 9999;" data-top="34">
+            <div id="adsctl00_PC_Float_Left" class="simplebanner" align="center">
+                <div align="center" class="simplebanner" style="">
+                <span class="adsitem" rel="43" tag="Libertys floating left">
+                                                        </span>
+                </div>
+            </div>
+        </div>
+        <div id="FloatRightAds" class="floating-ads" style="position: absolute; right: -140px; top: 70px; z-index: 9999;" data-top="34">
+            <div id="adsctl00_PC_Float_Right" class="simplebanner" align="center">
+                <div align="center" class="simplebanner" style="">
+                <span class="adsitem" rel="42" tag="Libertys floating right">
+                                                        </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- header -->
+<div class="mobile-header">
+    <div class="mobile-top">
+        <div class="wrapper-close-menu">&nbsp;</div>
+        <div class="mobile-logo line-blue" style="background: #c6c6c6;">
+            <a href="/" title="Xe Hay | Chuyên trang thông tin, đánh giá xe ô tô xe máy">
+                <img class="logo" src="/uploads/files/xehay-logo%20top%201.png" />
+                <!--<span>TRANG THÔNG TIN Ô TÔ - XE MÁY</span>-->
+            </a>
+            <ul class="social-icons">
+                <li><a target="_blank" href="https://www.facebook.com/xehay" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/Hunglamxehay" class="facebook"><i class="fa fa-twitter"></i></a></li>
+                <li><a target="_blank" href="" class="googleplus"><i class="fa fa-google-plus"></i></a></li>
+                <li><a target="_blank" href="https://www.youtube.com/channel/UCL19dahMH6qwXxGXFWAjdVA" class="youtube"><i class="fa fa-youtube-play"></i></a></li>
+            </ul>
+            <div class="search-holder">
+                <form method="POST" action="https://xehay.vn/tim-kiem" accept-charset="UTF-8"><input name="_token" type="hidden" value="GNpMstFLyvx8MVXbanIMKRo9P7FfYJX5RITQBBS9">
+                    <input type="search" name="keyword" value="" placeholder="Tìm kiếm nội dung trong Xe Hay"/>
+                </form>
+                <i class="icon-close"></i>
+            </div>
+            <i class="mobile-icon-search"></i>
+            <div class="like-page" style="  float: right; width: 112px; position: absolute; right: 108px; z-index: 1; top: -5px;">
+                <!--<div class="fb-like" data-href="https://www.facebook.com/xehay" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+
+
+<div class="g-ytsubscribe" data-channelid="UCL19dahMH6qwXxGXFWAjdVA" data-layout="default" data-count="default"></div>-->
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <img src="https://xehay.vn/public/auto/images/icon-menu-v4.gif" class="open-menu" />
+
+            <div class="mnav animatedExpand fadeInDownExpand" id="mobile-menu">
+                <ul>
+                    <li><span>Chủ nhật, 08/05/2022 | 15:31</span>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <img src="/public/auto/images/ic_home.v4.png" style="margin-top: 5px;" />Trang chủ
+                        </a>
+                    </li>
+                    <li><a href='/tin-tuc'>Tin Tức</a><ul class="sub"><li class='lisub'><a href='/tin-tuc/trong-nuoc'>Trong nước</a></li><li class='lisub'><a href='/tin-tuc/quoc-te'>Quốc tế</a></li><li class='lisub'><a href='/tin-tuc/giao-thong'>Giao thông</a></li><li class='lisub'><a href='/tin-tuc/giai-tri'>Giải trí</a></li></ul></li><li><a href='/video'>Xe Hay TV</a><ul class="sub"><li class='lisub'><a href='/video/clip-phong-su-307'>Clip phóng sự</a></li><li class='lisub'><a href='/video/hung-lam-312-315'>Hùng Lâm</a></li></ul></li><li><a href='/o-to-moi'>Ô tô mới</a><ul class="sub"></ul></li><li><a href='/xe-may-moi'>Xe máy mới</a><ul class="sub"></ul></li><li><a href='/danh-gia-xe'>Đánh giá xe</a><ul class="sub"><li class='lisub'><a href='/danh-gia-xe/danh-gia-o-to'>Đánh giá Ô tô</a></li><li class='lisub'><a href='/danh-gia-xe/danh-gia-xe-may'>Đánh giá Xe máy</a></li><li class='lisub relative'><a class='destop' href='#'>Emagazine</a><ul class="sub2"><li class='lisub'><a href='/emagazines-toyota-vios'>Emagazine </a></li><li class='lisub'><a href='/emagazines-toyota-2021'>Toyota 2021 - Look Back</a></li></ul></li></ul></li><li><a href='/tu-van'>Kinh nghiệm</a><ul class="sub"><li class='lisub'><a href='/tu-van/o-to-255'>Ô tô</a></li><li class='lisub'><a href='/tu-van/xe-may-256'>Xe máy</a></li><li class='lisub'><a href='/tu-van/luat-giao-thong'>Luật giao thông</a></li></ul></li><li><a href='/xe-va-tho'>Xe và Thợ</a><ul class="sub"><li class='lisub'><a href='/xe-va-tho/o-to-do'>Thợ Ô tô</a></li><li class='lisub'><a href='/xe-va-tho/cafe-racer'>Cafe Racer</a></li><li class='lisub'><a href='/xe-va-tho/xe-may-do'>Thợ Xe máy</a></li></ul></li><li><a href='/the-thao'>Thể thao</a><ul class="sub"></ul></li><li><a href='/cong-nghe'>Công nghệ</a><ul class="sub"></ul></li><li><a href='/trien-lam-o-to-273'>Triển lãm Ô tô</a><ul class="sub"><li class='lisub'><a href='/trien-lam-o-to-273/viet-nam'>Việt Nam</a></li><li class='lisub'><a href='/trien-lam-o-to-273/bangkok'>Bangkok</a></li><li class='lisub'><a href='/trien-lam-o-to-273/detroit'>Detroit</a></li><li class='lisub'><a href='/trien-lam-o-to-273/frankfurt'>Frankfurt</a></li><li class='lisub'><a href='/trien-lam-o-to-273/geneva'>Geneva</a></li><li class='lisub'><a href='/trien-lam-o-to-273/los-angeles'>Los Angeles</a></li><li class='lisub'><a href='/trien-lam-o-to-273/new-york'>New York</a></li><li class='lisub'><a href='/trien-lam-o-to-273/paris'>Paris</a></li><li class='lisub'><a href='/trien-lam-o-to-273/sema'>SEMA</a></li><li class='lisub'><a href='/trien-lam-o-to-273/tokyo'>Tokyo</a></li></ul></li><li><a href='/bang-gia'>Bảng giá</a><ul class="sub"><li class='lisub'><a href='/bang-gia/o-to-271'>Ô tô</a></li><li class='lisub'><a href='/bang-gia/xe-may-272'>Xe máy</a></li></ul></li>
+
+                    <li>
+                        <p><em>Giấy phép số: 2649/GP - TTĐT, Sở Thông tin và Truyền thông Hà Nội.</em><br />
+<em><em>Cấp ngày 28/8/2015.</em></em></p>
+
+<p><em>Chịu trách nhiệm nội dung: Bùi Mai Linh</em></p>
+
+<p><em>Cơ quan chủ quản: Công ty TNHH Xe Hay</em></p>
+
+<p><em>Địa chỉ: P802A, Toà nhà 47 Lê Văn Hưu, quận Hai Bà Trưng, Hà Nội</em></p>
+
+<p><em>Điện thoại: 0947924688</em></p>
+
+<p><em>Email: noidung@xehay.vn</em></p>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="top-ads" id="top-ads">
+        		<div class="banner-home-1AB banner-1000px relative text-center">            
+            <a target="_blank" class="href_ads_home3B" href="https://bit.ly/3MrHUTa" style="position: absolute; width: 100%; height: 100%; left:0; top:0;">  </a>                
+                 <img src="/public/html5/ads/2022/T4/26-4-300x250.jpg" style="border: 0px; display: block; overflow: hidden; margin: 0px auto; width: 300px!important; height: 250px; max-width: 300px;">
+         </div>
+        
+<!-- andy banner-mobile -->
+
+
+        
+    </div>
+
+</div>
+<header class="header">
+<div class="top-header">
+    <div>
+        <a href="/">
+            <img class="logo" src="/uploads/files/xehay-logo%20top%201.png" />
+        </a>
+        <ul class="social-icons">
+            <li><a target="_blank" href="https://www.facebook.com/xehay" class="facebook"><i class="fa fa-facebook"></i></a></li>
+            <li><a target="_blank" href="https://www.facebook.com/Hunglamxehay" class="facebook"><i class="fa fa-twitter"></i></a></li>
+            <li><a target="_blank" href="" class="googleplus"><i class="fa fa-google-plus"></i></a></li>
+            <li><a target="_blank" href="https://www.youtube.com/channel/UCL19dahMH6qwXxGXFWAjdVA" class="youtube"><i class="fa fa-youtube-play"></i></a></li>
+        </ul>
+        <style>
+            .header-info{
+                float: right !important;
+            }
+        </style>
+
+        <div class="header-info">
+            <div data-click="Search" data-click-phase="0">
+                <form method="POST" action="https://xehay.vn/tim-kiem" accept-charset="UTF-8" class="_539- roundedBox" id="searchBarClickRef" role="search"><input name="_token" type="hidden" value="GNpMstFLyvx8MVXbanIMKRo9P7FfYJX5RITQBBS9">
+                    <div class="smurfbarTopBorder"></div>
+                        <div class="uiTypeahead" data-ft="{&quot;tn&quot;:&quot;+Q&quot;}" id="u_0_c">
+                            <div class="wrap">
+                                <input type="hidden" autocomplete="off" class="hiddenInput">
+                                <div class="innerWrap">
+                                    <span class="uiSearchInput textInput" id="u_0_d">
+                                        <span>
+                                            <input type="text" name="keyword" value="" placeholder="Tìm kiếm nội dung trong Xe Hay" class="inputtext" maxlength="100" aria-label="Tìm kiếm" accesskey="/"  aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead_list_u_0_c" aria-haspopup="true" role="combobox" spellcheck="false" singlestate="undefined" />
+                                            <button type="submit" title="Nhập nội dung tìm kiếm">
+                                                <span class="accessible_elem">Tìm kiếm nội dung</span>
+                                            </button>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="smurfbarBottomBorder"></div>
+                </form>
+
+            </div>
+        </div>
+
+        <div style="float: right; width: 149px; height: 100%; padding-top: 10px;">
+<!--            <div class="fb-like" data-href="https://www.facebook.com/xehay" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+<div class="g-ytsubscribe" data-channelid="UCL19dahMH6qwXxGXFWAjdVA" data-layout="default" data-count="default"></div>-->
+        </div>
+
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+
+    <!-- ADS 1AB -->
+
+        
+        <div class="banner-home-1AB banner-1000px ">
+        <div id="banner1ab" class="relative">
+        <!-- 
+                        <div style='text-align:center;' class='header-banner-ads'>
+                            <div class='no-flash' style='display: none;height:220px'>
+                                <a href='http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=20&mc=click&pli=15036054&PluID=0&ord=[timestamp]' target='_blank' style='display:block'>
+                                    <img id='none-flash-14380984333259' width='1000px' src='/uploads/images/Banner%20Quang%20Cao/Top%20Banner%20Jpg%20Ranger%201000x220.jpg'>
+                                </a>
+                            </div>
+                            <div style='text-align:center;position:relative;margin: 0 auto;border: 0;height:220px;width:1000px' class='flash'>
+                                <object
+                                    data='/uploads/flash/Flash%20Top%20Banner%20Ranger%201000x220.swf?t=1651998676'
+                                    type='application/x-shockwave-flash'
+                                    version='8,0,0,0'
+                                    codebase='http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0'
+                                    style='border: 0px none; padding: 0px; margin: 0px; text-align: left; width: 1000px; height: 220px;'
+                                    dir='ltr'
+                                    <param value='false' name='play'>
+                                    <param value='opaque' name='wmode'>
+                                    <param value='false' name='menu'>
+                                    <param value='always' name='allowScriptAccess'>
+                                    <param value='true' name='allowFullScreen'>
+                                    <embed width='1000' height='220' allowscriptaccess='always' wmode='transparent' loop='true' play='true'
+                                           type='application/x-shockwave-flash'
+                                           pluginspage='http://www.macromedia.com/go/getflashplayer'
+                                           src='/uploads/flash/Flash%20Top%20Banner%20Ranger%201000x220.swf?t=1651998676'>
+                                </object>
+                                <a href='http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=20&mc=click&pli=15036054&PluID=0&ord=[timestamp]' target='_blank' style='position:absolute; top:0px;left:0px;bottom:0px;right:0px;height:220px;width:1000px; display:block;' id='link-'>
+                                <img width='1000' height='220' src='/public/auto/images/transparent.png'>
+                                </a>
+                            </div>
+                        </div>
+                         -->
+
+        <!-- Andy test 4-1 Editor -->
+	      <!--  <script src="https://bs.serving-sys.com/serving/adServer.bs?cn=display&c=19&mc=imp&pli=23662338&PluID=0&ord=[timestamp]&rtu=-1"></script>
+            <a target="_blank" class="href_ads_1A" href="https://bs.serving-sys.com/serving/adServer.bs?cn=trd&mc=click&pli=23662338&PluID=0&ord=[timestamp]"></a>            
+            <iframe id="click-url" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; display: block; overflow: hidden; margin: 0px auto; width: 1000px; height: 220px;" src="/public/html5/ads/2018/BannerT3/1-3/index.html"></iframe> -->
+ 			<!-- <script src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&c=28&pli=24554809&PluID=0&w=1000&h=220&ord=[timestamp]"></script>
+            <a target="_blank" class="href_ads_1A" href="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=brd&FlightID=24554809&Page=&PluID=0&Pos=1144342815"></a>            
+            <iframe id="click-url" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; display: block; overflow: hidden; margin: 0px auto; width: 1000px; height: 220px;" src="/public/html5/ads/2018/bannerT4/3-4/index.html"></iframe> -->
+            
+            <!-- <script src="https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&c=28&pli=24597232&PluID=64&w=1000&h=220&ord=[timestamp]&ucm=true"></script>
+            <noscript>
+            <a href="https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=brd&FlightID=24597232&Page=&PluID=64&Pos=758261195" target="_blank"><img src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=bsr&FlightID=24597232&Page=&PluID=64&Pos=758261195" border=0 width=1000 height=220></a>
+            </noscript>  -->
+
+         
+<!-- 2-11-2018 -->
+
+<!-- <ins class='dcmads' style='display:inline-block;width:1000px;height:220px'
+    data-dcm-placement='N952192.2586402XEHAY/B21761017.230893740'
+    data-dcm-rendering-mode='iframe'
+    data-dcm-https-only
+    data-dcm-resettable-device-id=''
+    data-dcm-app-id=''>
+  <script src='https://www.googletagservices.com/dcm/dcmads.js'></script>
+</ins> -->
+
+<!-- 
+<ins class='dcmads' style='display:inline-block;width:1000px;height:220px'
+    data-dcm-placement='N952192.2586402XEHAY/B22505834.243698933'
+    data-dcm-rendering-mode='iframe'
+    data-dcm-https-only
+    data-dcm-resettable-device-id=''
+    data-dcm-app-id=''>
+  <script src='https://www.googletagservices.com/dcm/dcmads.js'></script>
+</ins>
+ -->
+    <div style="margin-bottom: 8px;height: 220px;width: 1000px; position: relative;"> 
+                <a target="_blank" class="href_ads_home3B" href="https://bit.ly/3MrHUTa" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0"></a>    
+                <img src="/public/html5/ads/2022/T4/26-4-1000x220.jpg" alt="">                   
+            </div>
+
+<!-- andy-test     banner-home-3A -->
+<!-- 1-2-2018 -->
+              
+        </div> 
+        <div class="clear"></div>
+    </div>
+    <style>/*css andy*/
+	.text-center{text-align: center;}
+	.href_ads{position: absolute; width: 98%; height: 100%; z-index: 10;}
+	.href_ads_1A{    position: absolute;    width: 1000px;    height: 220px;    z-index: 10;    left: calc((100% - 1000px)/2);}	
+	.href_ads_1B{    position: absolute;    width: 1000px;    height: 120px;    z-index: 10;    left: calc((100% - 1000px)/2);}	
+	.relative{position: relative;}
+
+    nav.menu .sub2{ position: absolute; right: 0; top: 0; }
+    @media    screen and  (max-width: 600px) {
+        .destop{ display: none!important; }
+    }
+	/*css andy*/
+</style>
+    <!-- END ADS 1AB -->
+
+<nav class="menu">
+    <ul>
+        <li style="padding: 0 7px;">
+            <a href="/">
+                <img src="/public/auto/images/home.png" style="margin-top: 5px;" width="20" />
+            </a>
+        </li>
+
+        <li><a href='/tin-tuc'>Tin Tức</a><ul class="sub"><li class='lisub'><a href='/tin-tuc/trong-nuoc'>Trong nước</a></li><li class='lisub'><a href='/tin-tuc/quoc-te'>Quốc tế</a></li><li class='lisub'><a href='/tin-tuc/giao-thong'>Giao thông</a></li><li class='lisub'><a href='/tin-tuc/giai-tri'>Giải trí</a></li></ul></li><li><a href='/video'>Xe Hay TV</a><ul class="sub"><li class='lisub'><a href='/video/clip-phong-su-307'>Clip phóng sự</a></li><li class='lisub'><a href='/video/hung-lam-312-315'>Hùng Lâm</a></li></ul></li><li><a href='/o-to-moi'>Ô tô mới</a><ul class="sub"></ul></li><li><a href='/xe-may-moi'>Xe máy mới</a><ul class="sub"></ul></li><li><a href='/danh-gia-xe'>Đánh giá xe</a><ul class="sub"><li class='lisub'><a href='/danh-gia-xe/danh-gia-o-to'>Đánh giá Ô tô</a></li><li class='lisub'><a href='/danh-gia-xe/danh-gia-xe-may'>Đánh giá Xe máy</a></li><li class='lisub relative'><a class='destop' href='#'>Emagazine</a><ul class="sub2"><li class='lisub'><a href='/emagazines-toyota-vios'>Emagazine </a></li><li class='lisub'><a href='/emagazines-toyota-2021'>Toyota 2021 - Look Back</a></li></ul></li></ul></li><li><a href='/tu-van'>Kinh nghiệm</a><ul class="sub"><li class='lisub'><a href='/tu-van/o-to-255'>Ô tô</a></li><li class='lisub'><a href='/tu-van/xe-may-256'>Xe máy</a></li><li class='lisub'><a href='/tu-van/luat-giao-thong'>Luật giao thông</a></li></ul></li><li><a href='/xe-va-tho'>Xe và Thợ</a><ul class="sub"><li class='lisub'><a href='/xe-va-tho/o-to-do'>Thợ Ô tô</a></li><li class='lisub'><a href='/xe-va-tho/cafe-racer'>Cafe Racer</a></li><li class='lisub'><a href='/xe-va-tho/xe-may-do'>Thợ Xe máy</a></li></ul></li><li><a href='/the-thao'>Thể thao</a><ul class="sub"></ul></li><li><a href='/cong-nghe'>Công nghệ</a><ul class="sub"></ul></li><li><a href='/trien-lam-o-to-273'>Triển lãm Ô tô</a><ul class="sub"><li class='lisub'><a href='/trien-lam-o-to-273/viet-nam'>Việt Nam</a></li><li class='lisub'><a href='/trien-lam-o-to-273/bangkok'>Bangkok</a></li><li class='lisub'><a href='/trien-lam-o-to-273/detroit'>Detroit</a></li><li class='lisub'><a href='/trien-lam-o-to-273/frankfurt'>Frankfurt</a></li><li class='lisub'><a href='/trien-lam-o-to-273/geneva'>Geneva</a></li><li class='lisub'><a href='/trien-lam-o-to-273/los-angeles'>Los Angeles</a></li><li class='lisub'><a href='/trien-lam-o-to-273/new-york'>New York</a></li><li class='lisub'><a href='/trien-lam-o-to-273/paris'>Paris</a></li><li class='lisub'><a href='/trien-lam-o-to-273/sema'>SEMA</a></li><li class='lisub'><a href='/trien-lam-o-to-273/tokyo'>Tokyo</a></li></ul></li><li><a href='/bang-gia'>Bảng giá</a><ul class="sub"><li class='lisub'><a href='/bang-gia/o-to-271'>Ô tô</a></li><li class='lisub'><a href='/bang-gia/xe-may-272'>Xe máy</a></li></ul></li>
+
+    </ul>
+</nav>
+
+<style>
+    .car-filter .col-sm-3:first-child {
+        width: 25%;
+        line-height: 23px;
+        font-size: 13px;
+        font-weight: bold;
+        padding: 4px 0;
+    }
+    .car-filter .col-sm-3:nth-child(2) {
+        width: 23%;
+        padding: 5px 0;
+    }
+    .car-filter .search-row {
+        width: 100%;
+        padding-bottom: 0;
+        padding: 0 10px;
+    }
+    .car-filter .col-sm-3 .btn-xehay {
+        float: none;
+        margin-right: 0;
+        line-height: 21px;
+        height: 21px;
+        padding: 0 10px;
+        margin-bottom: 0;
+    }
+    .tab-content {
+        padding: 0;
+    }
+    #Car_brand_id {
+        position: relative;
+    }
+    #Car_brand_id label {
+        cursor: pointer;
+    }
+    .car-filter .col-sm-6 {
+        width: 50%;
+        float: left;
+        text-align: right;
+    }
+    .header .time {
+        float: right;
+        height: 31px;
+        line-height: 33px;
+        font-size: 11px;
+    }
+    .header .time img {
+        float: right;
+        margin-top: 6px;
+        margin-left: 10px;
+    }
+    .submenu {
+        width: 350px;
+        height: 200px;
+        overflow: hidden;
+        display: none;
+        background: #f2f2f2;
+        border: solid 1px #ccc;
+    }
+    .dropdown-menu > li {
+        position: relative;
+        height: 21px;
+        line-height: 20px;
+    }
+    .dropdown-menu > li ul {
+        position: absolute;
+        left: 0;
+        top: 21px;
+        z-index: 999999;
+    }
+    .dropdown-menu > li ul li {
+        padding: 5px 10px;
+        width: 41%;
+        float: left;
+        margin-left: 2%;
+    }
+    .dropdown-menu > li ul li a {
+        display: block;
+    }
+    .dropdown-menu > li ul li a:hover {
+        color: #438eb9;
+        text-decoration: underline;
+    }
+    .dropdown-menu > li > label:hover {
+        background-image: none;
+        color: white;
+    }
+</style>
+
+<script src="/public/auto/js/jquery.menu-aim.js"></script>
+
+
+
+        <div class="banner-home-2AB banner-1000px relative" style="position: relative;">
+            <div id="banner2ab">
+               
+                <a target="_blank" class="href_ads_home3B" href="https://bit.ly/GotechXH" style="position: absolute; width: 100%; height: 100%;"></a>            
+                <img src="/public/html5/ads/2022/T4/4-8/1000x120.jpg" alt="" style="border: 0px; display: block; overflow: hidden; margin: 0px auto; width: 1000px; height: 120px;">
+            </div>
+            <div class="clear"></div>
+        </div>    
+
+           
+
+<!-- andy-test     banner-1B -->
+                <!-- Andy test Editor 1B -->
+        <!-- <div class="banner-home-2AB banner-1000px relative" style="position: relative;">
+            <div id="banner2ab">
+                <a target="_blank" class="href_ads" style="height: 120px;" href="http://bit.ly/Suzuki_XEHAY"></a>                    
+                <img id="click-url" width="100%" src="/public/html5/ads/2019/T9/9-9/970x90.jpg" alt="">
+            </div>
+            <div class="clear"></div>
+        </div> -->
+        
+
+
+</header>
+<!-- end header -->
+
+    <div class="body">
+        <div style="padding: 10px;" class="error_page">
+            <h1 style="font-size: 1.5em">Rất tiếc! Chúng tôi không tìm thấy nội dung bạn đang tìm kiếm.</h1>
+            <p style="font-weight: bold">Bạn vui lòng quay lại sau hoặc trở về <a title="Trang chủ" href="/">Trang chủ</a></p>
+            <div>Không thể giải quyết yêu cầu "https://xehay.vn/public/auto/css/font/vjs.ttf".</div>
+        </div><!-- .error_page -->
+        <div class="clear"></div>
+    </div>
+
+<!-- footer -->
+<style>
+    .footer .menu-footer li {
+        width: auto;
+        height: 30px;
+    }
+    .footer .menu-footer li a {
+        padding: 3px 0;
+    }
+</style>
+<footer class="footer" style="padding-top:1px;">
+    <div class="foot">
+
+                        <!--<div class="wrap-menu-footer isnotmobile">
+            <ul id="ft-menu">
+                <li><h3>Tin tức</h3><ul class="sub"><li class='lisub'><a href='/tin-tuc/trong-nuoc'>Trong nước</a></li><li class='lisub'><a href='/tin-tuc/quoc-te'>Quốc tế</a></li><li class='lisub'><a href='/tin-tuc/giai-tri'>Giải trí</a></li></ul></li><li><h3>Video</h3><ul class="sub"><li class='lisub'><a href='/video/clip-phong-su-307'>Clip phóng sự</a></li><li class='lisub'><a href='/danh-gia-xe'>Đánh giá xe</a></li><li class='lisub'><a href='/video/hung-lam-312-315'>Hùng Lâm</a></li></ul></li><li><h3>Ô tô mới</h3><ul class="sub"><li class='lisub'><a href='/danh-gia-xe'>Đánh giá xe</a></li><li class='lisub'><a href='/o-to-moi'>Ô tô mới</a></li><li class='lisub'><a href='/xe-may-moi'>Xe máy mới</a></li></ul></li><li><h3>Xe máy mới</h3><ul class="sub"><li class='lisub'><a href='/danh-gia-xe'>Đánh giá xe</a></li><li class='lisub'><a href='/o-to-moi'>Ô tô mới</a></li><li class='lisub'><a href='/xe-may-moi'>Xe máy mới</a></li></ul></li><li><h3>Đánh giá xe</h3><ul class="sub"><li class='lisub'><a href='/danh-gia-xe/danh-gia-o-to'>Ô tô</a></li><li class='lisub'><a href='/danh-gia-xe/danh-gia-xe-may'>Xe máy</a></li><li class='lisub'><a href='/tin-tuc/giao-thong'>Giao thông</a></li></ul></li><li><h3>Tư vấn</h3><ul class="sub"><li class='lisub'><a href='/tu-van/o-to-255'>Ô tô</a></li><li class='lisub'><a href='/tu-van/xe-may-256'>Xe máy</a></li><li class='lisub'><a href='/tu-van/luat-giao-thong'>Luật giao thông</a></li></ul></li><li><h3>Xe độ</h3><ul class="sub"><li class='lisub'><a href='/xe-va-tho/o-to-do'>Ô tô</a></li><li class='lisub'><a href='/xe-va-tho/xe-may-do'>Xe máy</a></li><li class='lisub'><a href='/xe-va-tho/cafe-racer'>Cafe Racer</a></li></ul></li><li><h3>Công nghệ</h3><ul class="sub"><li class='lisub'><a href='/cong-nghe/tin-cong-nghe'>Tin công nghệ</a></li><li class='lisub'><a href='/cong-nghe/dien-thoai'>Ô tô</a></li><li class='lisub'><a href='/cong-nghe/may-anh'>Xe máy</a></li></ul></li>
+            </ul>
+        </div>-->
+        <div class="wrap-address">
+            <div class="address">
+                <p style="text-align: center;">&nbsp;</p>
+                <div style="width:100%; margin-bottom:10px;">
+                    <style>
+                        .footer-copyright{
+                            width: 50%;
+                            float: left;
+                            text-align: left;
+                        }
+
+                        .extra{
+                            width: 50%;
+                            float: left;
+                        }
+                    </style>
+                    <div class="footer-copyright">
+                        <p><em>Giấy phép số: 2649/GP - TTĐT, Sở Thông tin và Truyền thông Hà Nội.</em><br />
+<em><em>Cấp ngày 28/8/2015.</em></em></p>
+
+<p><em>Chịu trách nhiệm nội dung: Bùi Mai Linh</em></p>
+
+<p><em>Cơ quan chủ quản: Công ty TNHH Xe Hay</em></p>
+
+<p><em>Địa chỉ: P802A, Toà nhà 47 Lê Văn Hưu, quận Hai Bà Trưng, Hà Nội</em></p>
+
+<p><em>Điện thoại: 0947924688</em></p>
+
+<p><em>Email: noidung@xehay.vn</em></p>
+                    </div>
+                    <div class="extra col-sm-6">
+                        <p>
+                        <a class="social" href="https://www.facebook.com/xehay" target="_blank">
+                            <img src="/uploads/images/mxh/facebook.png" style="height: 28px; width: 28px;" />
+                        </a>
+                        <!-- <img style="display:none" class="track-impression" src="https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=19&mc=imp&pli=15736735&PluID=0&ord=[timestamp]&rtu=-1" />
+                        <img style="display:none" class="track-impression" src="https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=19&mc=imp&pli=16254319&PluID=0&ord=[timestamp]&rtu=-1" /> -->
+                        <a class="social" href="https://www.facebook.com/Hunglamxehay" target="_blank">
+                            <img src="/uploads/images/mxh/twitter.png" style="height: 28px; width: 28px;" />
+                        </a>
+                        <a class="social" href="" target="_blank">
+                            <img src="/uploads/images/mxh/google-plus.png" style="height: 28px; width: 28px;" />
+                        </a>
+                        <a class="social" href="https://www.youtube.com/channel/UCL19dahMH6qwXxGXFWAjdVA" target="_blank">
+                            <img src="/uploads/images/mxh/youtube.png" style="width: 28px; height: 28px;" />
+                        </a>
+                        <span class="g-plusone">&nbsp;</span>
+                        <span class="fb-like" data-action="like" data-href="https://www.facebook.com/xehay" data-layout="button" data-show-faces="true" style="text-align: center;">&nbsp;</span>
+                            
+                        </p>
+                        <p> 
+                            <a class="social" href="https://tuoitrethudo.com.vn/" target="_blank">
+                                <img src="/uploads/images/mxh/logo_tttd.jpg" style="height: 28px;" />
+                            </a>
+                            <a class="social" href="https://tuoitrethudo.com.vn/tuoi-tre-va-doi-song/" target="_blank">
+                                <img src="/uploads/images/mxh/tuoitre-doisong.jpg" style="height: 28px;" />
+                            </a>
+                            <a class="social" href="http://phapluat.tuoitrethudo.com.vn/" target="_blank">
+                                <img src="/uploads/images/mxh/tuoitre-phapluat.png" style="height: 28px;" />
+                            </a>
+                        </p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+<div class="mobile scrolltotop">
+    <img src="https://xehay.vn/public/auto/images/gototop.png" />
+</div>
+<!-- footer -->
+<script type="text/javascript">
+    var addthis_config = addthis_config || {};
+    addthis_config.data_track_addressbar = false;
+    addthis_config.data_track_clickback = false;
+</script>
+<script>
+    $('.scrolltotop').on('click', function() {
+        var body = $("html, body");
+        body.animate({
+            scrollTop: 0
+        }, '500', 'swing', function() {});
+    });
+    $(document).ready(function(e) {
+
+
+
+        //                $('nav.menu ul li.active').prev().css({'border-right': 0});
+    });
+
+
+    $('.open-menu').on('click', function() {
+        $('#mobile-menu').show();
+        $('.wrapper-close-menu').show();
+    });
+    $('.wrapper-close-menu').on('click', function() {
+        $('#mobile-menu').toggle();
+        $('.wrapper-close-menu').hide();
+    });
+    $('.icon-close').on('click', function() {
+        $('.search-holder').hide();
+    });
+    $('.mobile-icon-search').on('click', function() {
+        $('.search-holder').show({
+            'duration': 300,
+            'easing': 'linear'
+        });
+    });
+
+    $('.top-ads img').load(function() {
+        $(this).css({
+            'width': '95%'
+        });
+    });
+    setTimeout(function() {
+        $('.top-ads a > img').parent().css({'height': 'auto'});
+        $('.top-ads .no-flash').css({'width': '100%'});
+    }, 500);
+</script>
+
+
+
+
+<script type="text/javascript">
+
+
+    setTimeout(function () {
+        var isiPad = navigator.userAgent.match(/iPad/i) != null;
+        if (!FlashDetect.installed) {
+            $('.no-flash').css({display: 'block'});
+            $('.track-impression').attr('src','https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=19&mc=imp&pli=15736740&PluID=0&ord=[timestamp]&rtu=-1');
+            $('.track-impression').attr('src','https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=19&mc=imp&pli=16254372&PluID=0&ord=[timestamp]&rtu=-1');
+            $('.richmedia, .richmedia-flash, .flash').css({display: 'none'});
+        }
+    }, 500);
+
+</script>
+
+<style>
+@media  screen and  (min-width: 990px) {
+	.extra{width: calc(50% - 10px)!important;}
+}
+    @media  screen and (max-width: 960px) and (min-width: 715px) {
+        /*        .list-top-news {
+                    width: 97%;
+                }*/
+        #banner-event:not(:empty) {
+            margin-top: 8px;
+            /*margin-bottom: -8px;*/
+        }
+
+        #banner-event a {
+            width: 97%;
+        }
+        #banner-event a img {
+            width: 100% !important;
+        }
+
+        #banner-event .flash, #banner-event .no-flash {
+            height: auto !important;
+        }
+        footer .extra {
+		    width: 400px!important;
+		}
+    }
+    @media  screen and (max-width: 714px) {
+        .list-top-news {
+            width: 97%;
+            height: auto;
+        }
+        #banner-event:not(:empty) {
+            margin-top: 8px;
+            margin-bottom: -8px;
+        }
+
+        #banner-event a {
+            width: 97%;
+        }
+        #banner-event a img {
+            width: 100% !important;
+        }
+
+        #banner-event .flash, #banner-event .no-flash {
+            height: auto !important;
+        }
+
+    }
+
+    h1.main-title {
+        margin: 5px 0;
+        margin-bottom: 0;
+        font-size: 1em;
+        /*        white-space: nowrap;
+                text-overflow: ellipsis;
+                width: 492px;
+                overflow: hidden;*/
+    }
+
+    h1.main-title a {
+        font-size: 15px;
+        color: #000000;
+    }
+
+    /*    .home-slide .panel-wrapper .sapo {
+            padding: 4px 0;
+            height: 30px;
+        }*/
+
+    .list-top-news .item li {
+        padding: 8px 0 0;
+    }
+    .list-top-news .item li:first-child {
+        padding-top: 0;
+    }
+
+    .nav-wrapper ul li, .nav-wrapper {
+        border: 0;
+    }
+
+    .nav-wrapper ul li a span {
+        font-weight: bold;
+    }
+
+    .top-news-home .list-top-news .item li a {
+        font-weight: bold;
+    }
+    .nav-wrapper ul li span {
+        padding: 5px;
+    }
+    .nav-wrapper {
+        background: transparent;
+    }
+
+</style>
+
+<!-- <img width="1" src="https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=19&mc=imp&pli=15036054&PluID=0&ord=[timestamp]&rtu=-1"> -->
+
+
+
+<div style='display:none'>
+    <div id='inline_content' style='padding:10px; background:#fff;'>
+                            </div>
+</div>
+
+
+        
+        
+
+
+
+
+<!--  track impression code -->
+<!-- <script type="text/javascript" src="https://bs.serving-sys.com/serving/adServer.bs?cn=display&c=19&mc=imp&pli=21465184&PluID=0&ord=[timestamp]&rtu=-1"></script>
+<script type="text/javascript" src="https://bs.serving-sys.com/serving/adServer.bs?cn=display&c=19&mc=imp&pli=20058906&PluID=0&ord=[timestamp]&rtu=-1"></script>
+ -->
+
+<script type="text/javascript">
+$(function(){
+
+    // $('#click-url').load(function(){
+    //     $('#click-url').contents().bind("click", function () {
+            
+    //         window.open('https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=20&mc=click&pli=15736735&PluID=0&ord=[timestamp]');
+    //         return false;
+    //     });
+    // });
+    
+    // var width_sc = $( window ).width(), height_sc = $( window ).height();
+    // if(width_sc < 768){
+    //     $('.layer2ads,.layerads').css("height", height_sc - 42 );
+    // }
+
+    w_height = $(window).height();
+    $(document).scroll(function () {
+        var scrollTop = $(document).scrollTop();
+        if (scrollTop > 100) $('#gotop-link').fadeIn();
+        else $('#gotop-link').fadeOut();
+        $('.floating-ads').each(function () {
+            var $ads = $(this);
+            var parentTop = parseInt($ads.attr('data-top'));
+            if (scrollTop > 100) {
+                //$ads.css('top', scrollTop - parentTop + parseInt($ads.attr('data-top')) + 34);
+                $ads.css('top', scrollTop + w_height/2 - 250 );
+            }
+            else {
+                //$ads.css('top', parseInt($ads.attr('data-top')));
+                $ads.css('top', w_height/2 - 250);
+            }
+        });
+    });
+});
+
+</script>
+
+</body>
+
+</html>

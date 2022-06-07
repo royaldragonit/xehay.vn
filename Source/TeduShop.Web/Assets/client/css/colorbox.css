@@ -1,0 +1,585 @@
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:99999999999999; overflow:hidden; -webkit-transform: translate3d(0,0,0);}
+#cboxWrapper {max-width:none;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.cboxIframe{width:100%; height:100%; display:block; border:0; padding:0; margin:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:url(../img/overlay.png) repeat 0 0; opacity: 0.9; filter: alpha(opacity = 90);}
+#colorbox{outline:0;}
+    #cboxTopLeft{width:21px; height:21px; background:url(../img/controls.png) no-repeat -101px 0;}
+    #cboxTopRight{width:21px; height:21px; background:url(../img/controls.png) no-repeat -130px 0;}
+    #cboxBottomLeft{width:21px; height:21px; background:url(../img/controls.png) no-repeat -101px -29px;}
+    #cboxBottomRight{width:21px; height:21px; background:url(../img/controls.png) no-repeat -130px -29px;}
+    #cboxMiddleLeft{width:21px; background:url(../img/controls.png) left top repeat-y;}
+    #cboxMiddleRight{width:21px; background:url(../img/controls.png) right top repeat-y;}
+    #cboxTopCenter{height:21px; background:url(../img/border.png) 0 0 repeat-x;}
+    #cboxBottomCenter{height:21px; background:url(../img/border.png) 0 -29px repeat-x;}
+    #cboxContent{background:#fff; overflow:hidden;}
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{margin-bottom:28px;}
+        #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+        #cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+        #cboxLoadingOverlay{background:url(../img/loading_background.png) no-repeat center center;}
+        #cboxLoadingGraphic{background:url(../img/loading.gif) no-repeat center center;}
+
+        /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+        #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible; width:auto; background:none; }
+        
+        /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+        #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+
+        #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+        #cboxPrevious{position:absolute; bottom:0; left:0; background:url(../img/controls.png) no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxPrevious:hover{background-position:-75px -25px;}
+        #cboxNext{position:absolute; bottom:0; left:27px; background:url(../img/controls.png) no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxNext:hover{background-position:-50px -25px;}
+        #cboxClose{position:absolute; bottom:0; right:0; background:url(../img/controls.png) no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxClose:hover{background-position:-25px -25px;}
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*29-11-2021*/
+
+        @media only screen and (min-width: 1220px) {
+
+            /* body .container .body{ background: #fff!important; width: 1020px; padding: 10px 10px 0 10px; margin-top: 0; box-sizing: border-box;    float: left;}
+    header.header nav.menu, .home-middle{ width: 100%!important; }
+    body {background: url(/public/html5/ads/2021/T12/bgleft.jpg) no-repeat left bottom,url(/public/html5/ads/2021/T12/bgright.jpg) no-repeat right bottom #000; background-size: 25%; background-attachment: fixed; }
+    body .container{        width: 1020px;    margin: 0 auto;    overflow: unset;}*/
+        }
+
+        /*29-11-2021*/
+
+        .news-detail table td {
+            padding: 5px;
+        }
+
+        .headline-event ul li a {
+            color: #6fa2c3;
+            line-height: 17px;
+        }
+
+        .headline-event ul li {
+            margin-top: 3px;
+        }
+
+        .list-top-news .item li a {
+            color: #000;
+        }
+
+        .box .title a {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .vjs-poster {
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: contain;
+            cursor: pointer;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            width: 100%;
+        }
+
+        .top-ads:not(:empty) {
+            margin-top: 10px;
+        }
+
+        .not-desktop {
+            display: none;
+        }
+
+        @media screen and (max-width: 960px) and (min-width: 715px) {
+            * {
+                font-size: 16px;
+            }
+
+            .home-middle .col-left {
+                width: 60%;
+            }
+
+            .home-middle .col-middle {
+                margin-right: 0;
+                width: 35%;
+            }
+        }
+
+        @media screen and (max-width: 714px) {
+            * {
+                font-size: 16px;
+            }
+
+            .home-middle .col-left {
+                width: 95%;
+                border: 0;
+                padding-left: 10px;
+            }
+
+            .body .home-middle .col-middle {
+                margin-right: 0;
+                padding-right: 0;
+                border: 0;
+                width: 100%;
+            }
+
+            .not-desktop {
+                display: block;
+            }
+        }
+
+        .home-middle .col-left ul li img {
+            float: left;
+            margin-right: 8px;
+            margin-top: 3px;
+            margin-left: 1px;
+        }
+
+        ul.yiiPager a {
+            height: 17px;
+        }
+        nav.menu ul li,
+        nav.menu ul li.active {
+            padding: 0 10px;
+        }
+
+        .banner-1000px {
+            margin: 6px auto !important;
+        }
+        @media (max-width: 768px) {
+            .destop {
+                display: none !important
+            }
+        }
+
+        .vcontroll {
+            position: absolute;
+            left: 0;
+            top: -25px;
+            height: 25px;
+            width: 175px;
+            text-align: right;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+        }
+
+        .vcontroll i.fa {
+            cursor: pointer;
+            color: #fff;
+            margin: 0 8px;
+            line-height: 25px;
+            font-size: 16px;
+            font-style: normal !important;
+            z-index: 10000;
+        }
+		
+		  .box .title a {
+                    font-weight: bold;
+                }
+
+                .list-top-news {
+                    height: 515px;
+                    overflow-y: hidden;
+                }
+
+                #banner-event:not(:empty) {
+                    margin-bottom: 8px;
+
+                }
+
+                @media screen and (max-width: 960px) and (min-width: 715px) {
+
+                    #banner-event:not(:empty) {
+                        margin-top: 8px;
+                    }
+
+                    #banner-event a {
+                        width: 97%;
+                    }
+
+                    #banner-event a img {
+                        width: 100% !important;
+                    }
+
+                    #banner-event .flash,
+                    #banner-event .no-flash {
+                        height: auto !important;
+                    }
+                }
+
+                @media screen and (max-width: 714px) {
+                    .list-top-news {
+                        width: 97%;
+                        height: auto;
+                    }
+
+                    #banner-event:not(:empty) {
+                        margin-top: 8px;
+                        margin-bottom: -8px;
+                    }
+
+                    #banner-event a {
+                        width: 97%;
+                    }
+
+                    #banner-event a img {
+                        width: 100% !important;
+                    }
+
+                    #banner-event .flash,
+                    #banner-event .no-flash {
+                        height: auto !important;
+                    }
+                }
+				
+				   h1.main-title {
+                                margin: 5px 0;
+                                margin-bottom: 0;
+                                font-size: 1em;
+                                /*        white-space: nowrap;
+text-overflow: ellipsis;
+width: 492px;
+overflow: hidden;*/
+                            }
+
+                            h1.main-title a {
+                                font-size: 15px;
+                                color: #000000;
+                            }
+
+                            /*    .home-slide .panel-wrapper .sapo {
+padding: 4px 0;
+height: 30px;
+}*/
+                            .list-top-news .item li {
+                                padding: 8px 0 0;
+                            }
+
+                            .list-top-news .item li:first-child {
+                                padding-top: 0;
+                            }
+
+                            .nav-wrapper ul li,
+                            .nav-wrapper {
+                                border: 0;
+                            }
+
+                            .nav-wrapper ul li a span {
+                                font-weight: bold;
+                            }
+
+                            .top-news-home .list-top-news .item li a {
+                                font-weight: bold;
+                            }
+
+                            .nav-wrapper ul li span {
+                                padding: 5px;
+                            }
+							
+							   .car-filter .col-sm-3:first-child {
+                    width: 25%;
+                    line-height: 23px;
+                    font-size: 13px;
+                    font-weight: bold;
+                    padding: 4px 0;
+                }
+
+                .car-filter .col-sm-3:nth-child(2) {
+                    width: 23%;
+                    padding: 5px 0;
+                }
+
+                .car-filter .search-row {
+                    width: 100%;
+                    padding-bottom: 0;
+                    padding: 0 10px;
+                }
+
+                .car-filter .col-sm-3 .btn-xehay {
+                    float: none;
+                    margin-right: 0;
+                    line-height: 21px;
+                    height: 21px;
+                    padding: 0 10px;
+                    margin-bottom: 0;
+                }
+
+                .tab-content {
+                    padding: 0;
+                }
+
+                #Car_brand_id {
+                    position: relative;
+                }
+
+                #Car_brand_id label {
+                    cursor: pointer;
+                }
+
+                .car-filter .col-sm-6 {
+                    width: 50%;
+                    float: left;
+                    text-align: right;
+                }
+
+                .header .time {
+                    float: right;
+                    height: 31px;
+                    line-height: 33px;
+                    font-size: 11px;
+                }
+
+                .header .time img {
+                    float: right;
+                    margin-top: 6px;
+                    margin-left: 10px;
+                }
+
+                .submenu {
+                    width: 350px;
+                    height: 200px;
+                    overflow: hidden;
+                    display: none;
+                    background: #f2f2f2;
+                    border: solid 1px #ccc;
+                }
+
+                .dropdown-menu>li {
+                    position: relative;
+                    height: 21px;
+                    line-height: 20px;
+                }
+
+                .dropdown-menu>li ul {
+                    position: absolute;
+                    left: 0;
+                    top: 21px;
+                    z-index: 999999;
+                }
+
+                .dropdown-menu>li ul li {
+                    padding: 5px 10px;
+                    width: 41%;
+                    float: left;
+                    margin-left: 2%;
+                }
+
+                .dropdown-menu>li ul li a {
+                    display: block;
+                }
+
+                .dropdown-menu>li ul li a:hover {
+                    color: #438eb9;
+                    text-decoration: underline;
+                }
+
+                .dropdown-menu>li>label:hover {
+                    background-image: none;
+                    color: white;
+                }
+				
+				    /*css andy*/
+                .text-center {
+                    text-align: center;
+                }
+
+                .href_ads {
+                    position: absolute;
+                    width: 98%;
+                    height: 100%;
+                    z-index: 10;
+                }
+
+                .href_ads_1A {
+                    position: absolute;
+                    width: 1000px;
+                    height: 220px;
+                    z-index: 10;
+                    left: calc((100% - 1000px)/2);
+                }
+
+                .href_ads_1B {
+                    position: absolute;
+                    width: 1000px;
+                    height: 120px;
+                    z-index: 10;
+                    left: calc((100% - 1000px)/2);
+                }
+
+                .relative {
+                    position: relative;
+                }
+
+                nav.menu .sub2 {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+
+                @media screen and (max-width: 600px) {
+                    .destop {
+                        display: none !important;
+                    }
+                }
+
+                /*css andy*/
+				
+				            .footer .menu-footer li {
+                width: auto;
+                height: 30px;
+            }
+
+            .footer .menu-footer li a {
+                padding: 3px 0;
+            }
+			   @media screen and (min-width: 990px) {
+            .extra {
+                width: calc(50% - 10px) !important;
+            }
+        }
+
+        @media screen and (max-width: 960px) and (min-width: 715px) {
+
+            /*        .list-top-news {
+                    width: 97%;
+                }*/
+            #banner-event:not(:empty) {
+                margin-top: 8px;
+                /*margin-bottom: -8px;*/
+            }
+
+            #banner-event a {
+                width: 97%;
+            }
+
+            #banner-event a img {
+                width: 100% !important;
+            }
+
+            #banner-event .flash,
+            #banner-event .no-flash {
+                height: auto !important;
+            }
+
+            footer .extra {
+                width: 400px !important;
+            }
+        }
+
+        @media screen and (max-width: 714px) {
+            .list-top-news {
+                width: 97%;
+                height: auto;
+            }
+
+            #banner-event:not(:empty) {
+                margin-top: 8px;
+                margin-bottom: -8px;
+            }
+
+            #banner-event a {
+                width: 97%;
+            }
+
+            #banner-event a img {
+                width: 100% !important;
+            }
+
+            #banner-event .flash,
+            #banner-event .no-flash {
+                height: auto !important;
+            }
+
+        }
+
+        h1.main-title {
+            margin: 5px 0;
+            margin-bottom: 0;
+            font-size: 1em;
+            /*        white-space: nowrap;
+                text-overflow: ellipsis;
+                width: 492px;
+                overflow: hidden;*/
+        }
+
+        h1.main-title a {
+            font-size: 15px;
+            color: #000000;
+        }
+
+        /*    .home-slide .panel-wrapper .sapo {
+            padding: 4px 0;
+            height: 30px;
+        }*/
+
+        .list-top-news .item li {
+            padding: 8px 0 0;
+        }
+
+        .list-top-news .item li:first-child {
+            padding-top: 0;
+        }
+
+        .nav-wrapper ul li,
+        .nav-wrapper {
+            border: 0;
+        }
+
+        .nav-wrapper ul li a span {
+            font-weight: bold;
+        }
+
+        .top-news-home .list-top-news .item li a {
+            font-weight: bold;
+        }
+
+        .nav-wrapper ul li span {
+            padding: 5px;
+        }
+
+        .nav-wrapper {
+            background: transparent;
+        }
