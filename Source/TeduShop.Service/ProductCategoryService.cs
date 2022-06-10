@@ -15,6 +15,7 @@ namespace TeduShop.Service
         ProductCategory Delete(int id);
 
         IEnumerable<ProductCategory> GetAll();
+        List<ProductCategory> GetListCategory();
 
         IEnumerable<ProductCategory> GetAll(string keyword);
 
@@ -68,6 +69,11 @@ namespace TeduShop.Service
         public ProductCategory GetById(int id)
         {
             return _ProductCategoryRepository.GetSingleById(id);
+        }
+
+        public List<ProductCategory> GetListCategory()
+        {
+            return _ProductCategoryRepository.GetListCategory();
         }
 
         public void Save()

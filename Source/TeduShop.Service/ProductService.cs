@@ -33,7 +33,8 @@ namespace TeduShop.Service
         IEnumerable<Product> GetReatedProducts(int id, int top);
 
         IEnumerable<string> GetListProductByName(string name);
-
+        List<Product> GetLastest();
+        List<Product> GetVideos();
         Product GetById(int id);
 
         void Save();
@@ -45,8 +46,15 @@ namespace TeduShop.Service
         void IncreaseView(int id);
 
         IEnumerable<Product> GetListProductByTag(string tagId, int page, int pagesize, out int totalRow);
+        List<Product> GetHomeProduct();
+        List<Product> GetProductViewMax();
 
         bool SellProduct(int productId, int quantity);
+        bool CheckUrlIsValid(string categoryAlias);
+        bool CheckUrlIsValid(string categoryAlias, string newsAlias);
+        List<Product> GetNewsByCategory(string categoryAlias);
+        Product GetByAlias(string newsAlias);
+        List<Product> GetNewsOtherByAlias(string newsAlias);
     }
 
     public class ProductService : IProductService
@@ -152,6 +160,10 @@ namespace TeduShop.Service
         public IEnumerable<Product> GetLastest(int top)
         {
             return _productRepository.GetMulti(x => x.Status).OrderByDescending(x => x.CreatedDate).Take(top);
+        }
+        public List<Product> GetLastest()
+        {
+            return _productRepository.GetLastest();
         }
 
         public IEnumerable<Product> GetHotProduct(int top)
@@ -264,6 +276,46 @@ namespace TeduShop.Service
             else
                 query = _productRepository.GetAll();
             return query;
+        }
+
+        public List<Product> GetHomeProduct()
+        {
+            return _productRepository.GetHomeProduct();
+        }
+
+        public List<Product> GetVideos()
+        {
+            return _productRepository.GetMulti(x => x.CategoryID == 2 && x.Status).Take(4).ToList();
+        }
+
+        public List<Product> GetProductViewMax()
+        {
+            return _productRepository.GetProductViewMax();
+        }
+
+        public bool CheckUrlIsValid(string categoryAlias)
+        {
+            return _productRepository.CheckUrlIsValid(categoryAlias);
+        }
+
+        public List<Product> GetNewsByCategory(string categoryAlias)
+        {
+            return _productRepository.GetNewsByCategory(categoryAlias);
+        }
+
+        public bool CheckUrlIsValid(string categoryAlias, string newsAlias)
+        {
+            return _productRepository.CheckUrlIsValid(categoryAlias,newsAlias);
+        }
+
+        public Product GetByAlias(string newsAlias)
+        {
+            return _productRepository.GetByAlias( newsAlias);
+        }
+
+        public List<Product> GetNewsOtherByAlias(string newsAlias)
+        {
+            return _productRepository.GetNewsOtherByAlias(newsAlias);
         }
     }
 }

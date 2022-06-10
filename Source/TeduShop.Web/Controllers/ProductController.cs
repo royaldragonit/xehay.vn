@@ -23,19 +23,31 @@ namespace TeduShop.Web.Controllers
             this._productCategoryService = productCategoryService;
         }
         // GET: Product
-        public ActionResult Detail(int productId)
+        //public ActionResult Detail(int productId)
+        //{
+        //    var productModel = _productService.GetById(productId);
+        //    var viewModel = Mapper.Map<Product, ProductViewModel>(productModel);
+
+        //    var relatedProduct = _productService.GetReatedProducts(productId, 6);
+        //    ViewBag.RelatedProducts = Mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(relatedProduct);
+
+        //    List<string> listImages = new JavaScriptSerializer().Deserialize<List<string>>(viewModel.MoreImages);
+        //    ViewBag.MoreImages = listImages;
+
+        //    ViewBag.Tags = Mapper.Map<IEnumerable<Tag>, IEnumerable<TagViewModel>>(_productService.GetListTagByProductId(productId));
+        //    return View(viewModel);
+        //}
+        public ActionResult Detail(string categoryAlias,string newsAlias)
         {
-            var productModel = _productService.GetById(productId);
-            var viewModel = Mapper.Map<Product, ProductViewModel>(productModel);
-
-            var relatedProduct = _productService.GetReatedProducts(productId, 6);
-            ViewBag.RelatedProducts = Mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(relatedProduct);
-
-            List<string> listImages = new JavaScriptSerializer().Deserialize<List<string>>(viewModel.MoreImages);
-            ViewBag.MoreImages = listImages;
-
-            ViewBag.Tags = Mapper.Map<IEnumerable<Tag>, IEnumerable<TagViewModel>>(_productService.GetListTagByProductId(productId));
-            return View(viewModel);
+            bool isUrlValid = _productService.CheckUrlIsValid(categoryAlias,newsAlias);
+            if (!isUrlValid)
+            {
+                return HttpNotFound();
+            }
+            Product product = _productService.GetByAlias(newsAlias);
+            ViewBag.NewsOther= _productService.GetNewsOtherByAlias(newsAlias);
+            ViewBag.ListCategory = _productCategoryService.GetListCategory();
+            return View(product);
         }
 
         public ActionResult Category(int id, int page = 1, string sort = "")

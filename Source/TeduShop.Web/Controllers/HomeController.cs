@@ -34,12 +34,16 @@ namespace TeduShop.Web.Controllers
             var homeViewModel = new HomeViewModel();
             //homeViewModel.Slides = slideView;
 
-            var lastestProductModel = _productService.GetLastest(3);
+            homeViewModel.HomeProduct = _productService.GetHomeProduct();
+            var lastestProductModel = _productService.GetLastest();
+            var videos = _productService.GetVideos();
             var topSaleProductModel = _productService.GetHotProduct(3);
-            var lastestProductViewModel = Mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(lastestProductModel);
+            homeViewModel.ListCategory = _productCategoryService.GetListCategory();
+            homeViewModel.ProductViewMax = _productService.GetProductViewMax();
             var topSaleProductViewModel = Mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(topSaleProductModel);
-            homeViewModel.LastestProducts = lastestProductViewModel;
+            homeViewModel.LastestProducts = lastestProductModel;
             homeViewModel.TopSaleProducts = topSaleProductViewModel;
+            homeViewModel.Videos = videos;
 
             try
             {
@@ -70,14 +74,23 @@ namespace TeduShop.Web.Controllers
         {
             return PartialView();
         }
-
-        //[ChildActionOnly]
-        //[OutputCache(Duration = 3600)]
-        //public ActionResult Category()
-        //{
-        //    var model = _productCategoryService.GetAll();
-        //    var listProductCategoryViewModel = Mapper.Map<IEnumerable<ProductCategory>, IEnumerable<ProductCategoryViewModel>>(model);
-        //    return PartialView(listProductCategoryViewModel);
-        //}
-     }
+        [OutputCache(Duration = 3600)]
+        public ActionResult Category(string categoryAlias)
+        {
+            bool isUrlValid = _productService.CheckUrlIsValid(categoryAlias);
+            if (!isUrlValid)
+            {
+                return HttpNotFound();
+            }
+            var homeViewModel = new HomeViewModel();
+            var lastestProductModel = _productService.GetLastest();
+            var videos = _productService.GetVideos();
+            homeViewModel.ListCategory = _productCategoryService.GetListCategory();
+            homeViewModel.ProductViewMax = _productService.GetProductViewMax();
+            homeViewModel.LastestProducts = lastestProductModel;
+            homeViewModel.Videos = videos;
+            homeViewModel.HomeProduct = _productService.GetNewsByCategory(categoryAlias);
+            return View("Index", homeViewModel);
+        }
+    }
 }

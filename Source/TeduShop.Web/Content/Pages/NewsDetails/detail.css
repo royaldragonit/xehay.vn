@@ -1,0 +1,65 @@
+﻿
+.mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .destop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+}
+
+.href_ads {
+    left: 0;
+    position: absolute;
+    width: 98%;
+    height: 100%;
+    z-index: 10;
+}
+
+.layerads {
+    position: relative;
+    z-index: 4;
+}
+
+.layer1ads {
+    position: absolute !important;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100% !important;
+    background: #fff;
+    clip: rect(0, auto, auto, 0);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.layer2ads {
+    display: block;
+    position: fixed;
+    width: 100%;
+    margin: 0px auto;
+    top: 0;
+    left: 0px;
+    overflow: hidden;
+    z-index: 1;
+    backface-visibility: hidden;
+    transform: translateZ(0px);
+    line-height: 1px;
+}
+
+.layer2ads, .layerads {
+    min-height: 568px;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.layer2ads img {
+    +width:100%;
+}

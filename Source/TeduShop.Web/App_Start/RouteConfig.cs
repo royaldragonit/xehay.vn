@@ -74,10 +74,22 @@ namespace TeduShop.Web
                    namespaces: new string[] { "TeduShop.Web.Controllers" }
              );
 
+            //routes.MapRoute(
+            //     name: "Product",
+            //     url: "{alias}.p-{productId}.html",
+            //     defaults: new { controller = "Product", action = "Detail", productId = UrlParameter.Optional },
+            //       namespaces: new string[] { "TeduShop.Web.Controllers" }
+            // );
             routes.MapRoute(
-                 name: "Product",
-                 url: "{alias}.p-{productId}.html",
-                 defaults: new { controller = "Product", action = "Detail", productId = UrlParameter.Optional },
+                 name: "Catetory",
+                 url: "{categoryAlias}",
+                 defaults: new { controller = "Home", action = "Category" },
+                   namespaces: new string[] { "TeduShop.Web.Controllers" }
+             );
+            routes.MapRoute(
+                 name: "News Detail",
+                 url: "{categoryAlias}/{newsAlias}.html",
+                 defaults: new { controller = "Product", action = "Detail" },
                    namespaces: new string[] { "TeduShop.Web.Controllers" }
              );
             routes.MapRoute(

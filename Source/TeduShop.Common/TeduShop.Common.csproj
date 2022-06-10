@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="CommonConstants.cs" />
     <Compile Include="ConfigHelper.cs" />
+    <Compile Include="Core\Extension.cs" />
     <Compile Include="Exceptions\NameDuplicatedException.cs" />
     <Compile Include="MailHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +75,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TeduShop.Model\TeduShop.Model.csproj">
+      <Project>{1a60e027-7b3b-4881-9ec3-2666b297cb43}</Project>
+      <Name>TeduShop.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

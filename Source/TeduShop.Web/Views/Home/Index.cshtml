@@ -1,27 +1,29 @@
-﻿@model TeduShop.Web.Models.HomeViewModel
+﻿@using TeduShop.Common.Core;
+@using TeduShop.Model.Models;
+@model TeduShop.Web.Models.HomeViewModel
 @{ ViewBag.Title = Model.Title;
-                ViewBag.MetaKeyword = Model.MetaKeyword;
-                ViewBag.MetaDescription = Model.MetaDescription;
-                Layout = "~/Views/Shared/LayoutsXipo.cshtml"; 
-    }
+    ViewBag.MetaKeyword = Model.MetaKeyword;
+    ViewBag.MetaDescription = Model.MetaDescription;
+    Layout = "~/Views/Shared/LayoutsXipo.cshtml";}
 <div class="body">
     <div class="top-news-home andy-home-blade">
+        @if (Model.HomeProduct.Count > 0) {
         <div class="left">
             <div class="home-slide">
                 <div class="box-home-large">
                     <div>
                         <div class="panel">
                             <div class="panel-wrapper">
-                                <a href="#" class="link-img" title="Chiêm ngưỡng một trong những chiếc McLaren 765LT được cá nhân hóa ">
-                                    <img src="~/Assets/client/data/xehay-mclaren-765lt-08052022-7_result.jpg" width="490" height="279" />
+                                <a href="@Model.HomeProduct.FirstOrDefault().GeneraSlugNews()" class="link-img" title="@Model.HomeProduct.FirstOrDefault().Name">
+                                    <img src="@Model.HomeProduct.FirstOrDefault().Image" width="490" height="279" />
                                 </a>
                                 <h1 class="main-title">
-                                    <a href="#" title="Chiêm ngưỡng một trong những chiếc McLaren 765LT được cá nhân hóa ">
-                                        Chiêm ngưỡng một trong những chiếc McLaren 765LT được cá nhân hóa "khủng" nhất trên thế giới
+                                    <a href="@Model.HomeProduct.FirstOrDefault().GeneraSlugNews()" title="@Model.HomeProduct.FirstOrDefault().Name">
+                                        @Model.HomeProduct.FirstOrDefault().Name
                                     </a>
                                 </h1>
                                 <p class="sapo">
-                                    Mỗi tùy chọn trên chiếc&nbsp;McLaren 765LT này đều giúp nâng cao "phẩm giá" của siêu xe,&nbsp;chiếc xe trở nên vô cùng khác biệt, độc đáo và cuốn hút.
+                                    @Model.HomeProduct.FirstOrDefault().Description
                                 </p>
                             </div>
                         </div>
@@ -30,25 +32,14 @@
 
                     <div class="nav-wrapper">
                         <ul>
-                            <li>
-                                <a href="#" title="Lộ diện Lexus LBX: Mẫu SUV cỡ nhỏ mới của Lexus sẽ chia sẻ khung gầm của Yaris Cross">
-                                    <img width="142" height="79" src="~/Assets/client/data/xehay-lexus-07052022-4_result.jpg" alt="Lộ diện Lexus LBX: Mẫu SUV cỡ nhỏ mới của Lexus sẽ chia sẻ khung gầm của Yaris Cross" title="Lộ diện Lexus LBX: Mẫu SUV cỡ nhỏ mới của Lexus sẽ chia sẻ khung gầm của Yaris Cross" />
-                                    <span>Lộ diện Lexus LBX: Mẫu SUV cỡ nhỏ mới của Lexus sẽ chia sẻ khung gầm của Yaris Cross</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="">
-                                    <img width="142" height="79" src="~/Assets/client/data/xehay-pagani-c10-07052022-1_result.jpg" alt="">
-                                    <span>"Lộ hàng" mẫu xe kế nhiệm của Pagani Huayra - Sẽ trình làng vào tháng 9 năm nay</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title="New Mazda CX-8 2022 ra mắt Việt Nam, giá từ 1,079 tỷ đồng">
-                                    <img width="142" height="79" src="~/Assets/client/data/xehay-cx8-070522-1_result.jpg" alt="New Mazda CX-8 2022 ra mắt Việt Nam, giá từ 1,079 tỷ đồng" title="New Mazda CX-8 2022 ra mắt Việt Nam, giá từ 1,079 tỷ đồng" />
-                                    <span>New Mazda CX-8 2022 ra mắt Việt Nam, giá từ 1,079 tỷ đồng</span>
-                                </a>
-                            </li>
-
+                            @foreach (Product product in Model.HomeProduct.Skip(1).Take(3))
+                            {
+                <li>
+                    <a href="@product.GeneraSlugNews()" title="@product.Name">
+                        <img width="142" height="79" src="@product.Image" alt="@product.Name" title="@product.Name" />
+                        <span>@product.Name</span>
+                    </a>
+                </li>}
                         </ul>
                     </div>
                 </div>
@@ -72,55 +63,27 @@
                 <div id="banner-event"></div>
                 <ul class="item">
                     <h2 class="title" style="    text-transform: uppercase;    font-weight: 700;    background: #e6e6e6!important;    height: 21px;    color: #000 !important;    padding: 0 10px;    font-size: 15px;    line-height: 23px;    ">Tin nổi bật</h2>
-                    <li>
-                        <div class="home-news-item">
-                            <a class="latest-home-item" style="float: left; margin-right: 8px;" href="#" title="SUV điện hiệu suất cao BMW iX đầu tiên về Việt Nam">
-                                <img src="~/Assets/client/data/xehay-bmw-050522-1.jpg" width="185" height="105" />
-                            </a>
-                            <a href="#">
-                                SUV điện hiệu suất cao BMW iX đầu tiên về Việt Nam
-                                <img src="data/ic_photo.png">
-                            </a>
-                            <p class="not-desktop">
-                                BMW iX&nbsp;sở hữu công nghệ lái xe bán tự động và các dịch vụ kỹ thuật số tiên tiến hàng đầu. Cụ thể như chiếc SUV hiệu suất có thể...
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                    <li>
-                        <div class="home-news-item">
-                            <a class="latest-home-item" style="float: left; margin-right: 8px;" href="#" title="Ineos Grenadier - ">
-                                <img src="~/Assets/client/data/xehay-grenadier-070522-1_result.jpg" width="185" height="105" />
-                            </a>
-                            <a href="#">
-                                Ineos Grenadier - "Anh em đồng hương" của Land Rover Defender sắp mở bán chính thức
-                                <img src="~/Assets/client/data/ic_photo.png">
-                            </a>
-                            <p class="not-desktop">
-                                Ineos Grenadier là mẫu xe Anh Quốc có ngoại hình khá giống chiếc xe đồng hương Land Rover Defender. Đây là mẫu SUV mạnh mẽ được thiết...
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                    <li>
-                        <div class="home-news-item">
-                            <a class="latest-home-item" style="float: left; margin-right: 8px;" href="#" title="Rolls-Royce Cullinan màu xanh ngọc lục bảo “hàng siêu hiếm” xuất hiện tại Việt Nam">
-                                <img src="~/Assets/client/data/364db93c-660c-4149-b1e5-99fb5eeed7bd.jpeg" width="185" height="105" />
-                            </a>
-                            <a href="#">
-                                Rolls-Royce Cullinan màu xanh ngọc lục bảo “hàng siêu hiếm” xuất hiện tại Việt Nam
-                                <img src="~/Assets/client/data/ic_photo.png">
-                            </a>
-                            <p class="not-desktop">
-                                Chiếc Rolls-Royce Cullinan&nbsp;này sở hữu màu sơn ngoại thất xanh ngọc lục bảo huyền bí, trong khi nội thất được phối màu cam-trắng...
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-
+                    @foreach (Product product in Model.HomeProduct.Skip(4).Take(3))
+                    {
+        <li>
+            <div class="home-news-item">
+                <a class="latest-home-item" style="float: left; margin-right: 8px;" href="@product.GeneraSlugNews()" title="@product.Name">
+                    <img src="@product.Image" width="185" height="105" />
+                </a>
+                <a href="#">
+                    @product.Name
+                    <img src="/Assets/client/data/ic_photo.png">
+                </a>
+                <p class="not-desktop">
+                    @product.Description
+                </p>
+            </div>
+            <div class="clearfix"></div>
+        </li>}
                 </ul>
             </div>
         </div>
+        }
         <div class="right">
             <div id="banner3double">
 
@@ -133,7 +96,7 @@
                     <a target="_blank" class="href_ads_home3B" href="#" style="position: absolute; width: 100%; height: 100%;"> </a>
                     <img src="~/Assets/client/data/300x250.jpg">
                     <script src="js/:"></script>
-                    <script type="application/javascript" src="js/skeleton.js"></script> <noscript><img src="data/:" border=0 width=1 height=1 alt=""></noscript>
+                    <script type="application/javascript" src="js/skeleton.js"></script> <noscript><img src="/Assets/client/data/:" border=0 width=1 height=1 alt=""></noscript>
                 </div>
 
 
@@ -155,150 +118,20 @@
                     <h2 class="title"><a href="#">TIN MỚI CẬP NHẬT</a></h2>
                 </div>
                 <ul>
-                    <li>
-                        <a class="latest-home-item" href="#" title="Mercedes-Benz CLA đâm vào cây rồi bốc cháy ven Hồ Tây">Mercedes-Benz CLA đâm vào cây rồi bốc cháy ven Hồ Tây</a>
-                        <div class="home-news-item">
-                            <a class="latest-home-item" href="#" title="Mercedes-Benz CLA đâm vào cây rồi bốc cháy ven Hồ Tây">
-                                <img src="~/Assets/client/data/97b00f54-a621-4921-83f2-b18bfe454c85.jpeg" width="127" height="70" />
-                            </a>
-                            <p>
-                                Sáng nay ngày 8/5, một chiếc Mercedes-Benz CLA 250 do một người đàn ông điều khiển có thể do bất cẩn khi quay đầu đã tông trúng một cây xanh rồi bốc cháy trên đường Tô Ngọc Vân, Hà Nội.&nbsp;
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                    <li>
-                        <a class="latest-home-item" href="#" title="Xe quân đội Nga sử dụng bộ lốp hơn 30 năm từ thời Liên Xô trong cuộc chiến tranh với Ukraina">Xe quân đội Nga sử dụng bộ lốp hơn 30 năm từ thời Liên Xô trong cuộc chiến tranh với Ukraina</a>
-                        <div class="home-news-item">
-                            <a class="latest-home-item" href="#" title="Xe quân đội Nga sử dụng bộ lốp hơn 30 năm từ thời Liên Xô trong cuộc chiến tranh với Ukraina">
-                                <img src="~/Assets/client/data/xehay-xe_quan_su_nga-25042022-1.jpg" width="127" height="70" />
-                            </a>
-                            <p>
-                                Không rõ là do quân đội Nga đang phải đối mặt với tình trạng thiếu hụt trầm trọng quân nhu (rất khó xảy ra), hay đồ từ thời Liên Xô "dùng mãi không hỏng"; nhưng bộ lốp 31 năm có mặt trên xe quân sự ở...
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                    <li>
-                        <a class="latest-home-item" href="#" title="Bản độ G63 địa hình 888 mã lực ">Bản độ G63 địa hình 888 mã lực "cực gắt" đến từ lò Brabus</a>
-                        <div class="home-news-item">
-                            <a class="latest-home-item" href="#" title="Bản độ G63 địa hình 888 mã lực ">
-                                <img src="~/Assets/client/data/xehay-brabus_g63_900_crawler-06052022-6.jpg" width="127" height="70" />
-                            </a>
-                            <p>
-                                Nếu được đưa về Việt Nam và ra biển trắng, "cỗ máy" đua địa hình cuồng dại trị giá 793.000 USD (~&nbsp;18 tỷ VNĐ)&nbsp;này rất có thể tiêu tốn của các đại gia trên 50 tỷ VNĐ.
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                    <li>
-                        <a class="latest-home-item" href="#" title="Ferrari SP48 Unica - Siêu xe “độc nhất vô nhị” với thiết kế đẹp hút hồn">Ferrari SP48 Unica - Siêu xe “độc nhất vô nhị” với thiết kế đẹp hút hồn</a>
-                        <div class="home-news-item">
-                            <a class="latest-home-item" href="#" title="Ferrari SP48 Unica - Siêu xe “độc nhất vô nhị” với thiết kế đẹp hút hồn">
-                                <img src="~/Assets/client/data/xehay-sp48-060522-3_result.jpg" width="127" height="70" />
-                            </a>
-                            <p>
-                                Ferrari vừa công bố các hình ảnh của siêu xe thể thao Ferrari SP48 Unica, được biết mẫu xe này là&nbsp;thiết kế độc bản, sản xuất riêng theo đơn đặt hàng của một vị đại gia bí ẩn.
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                    <li>
-                        <a class="latest-home-item" href="#" title="Mini ra mắt gói phụ kiện camping dành cho Cooper S Countryman ALL4: Xách balô lên và đi">Mini ra mắt gói phụ kiện camping dành cho Cooper S Countryman ALL4: Xách balô lên và đi</a>
-                        <div class="home-news-item">
-                            <a class="latest-home-item" href="#" title="Mini ra mắt gói phụ kiện camping dành cho Cooper S Countryman ALL4: Xách balô lên và đi">
-                                <img src="~/Assets/client/data/xehay-mini-060522-1.jpg" width="127" height="70" />
-                            </a>
-                            <p>
-                                Mới đây Mini đã ra mắt gói phụ kiện mới danh riêng cho Cooper S Countryman ALL4 mang tên “Untamed Edition”, bộ sản phẩm này hứa hẹn sẽ thu hút những khách hàng có niềm đam mê camping.
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                    <li>
-                        <a class="latest-home-item" href="#" title="Lamborghini Huracan độ bodykit ">Lamborghini Huracan độ bodykit "hàng khủng" từng của doanh nhân Nguyễn Quốc Cường tái xuất</a>
-                        <div class="home-news-item">
-                            <a class="latest-home-item" href="#" title="Lamborghini Huracan độ bodykit ">
-                                <img src="data/xehay-huracan-04052022-10_result.jpg" width="127" height="70" />
-                            </a>
-                            <p>
-                                Đây là một trong những chiếc&nbsp;Lamborghini Huracan có mặt sớm nhất tại Việt Nam. Nguyên bản xe có ngoại thất màu vàng nhưng hiện đã được đổi sang màu xanh chuối&nbsp;rất bắt mắt.
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                    <li>
-                        <a class="latest-home-item" href="#" title="Đại gia Quảng Ninh ">Đại gia Quảng Ninh "chia tay" Mercedes-AMG G63 độ Brabus 800 sau một tháng về chung nhà</a>
-                        <div class="home-news-item">
-                            <a class="latest-home-item" href="#" title="Đại gia Quảng Ninh ">
-                                <img src="data/xehay-g63-06052022-1_result.jpg" width="127" height="70" />
-                            </a>
-                            <p>
-                                Trước khi tậu chiếc&nbsp;Mercedes-AMG G63 độ Brabus 800 hầm hố, vị đại gia đã sở hữu một chiếc G63 khác, có lẽ đó là lý do khiến vị đại gia không quá mặn mà với bản độ&nbsp;của Brabus và quyết định...
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                    <li>
-                        <a class="latest-home-item" href="#" title="Indonesia sở hữu nguồn nguyên liệu lớn nhất thế giới để sản xuất pin xe điện">Indonesia sở hữu nguồn nguyên liệu lớn nhất thế giới để sản xuất pin xe điện</a>
-                        <div class="home-news-item">
-                            <a class="latest-home-item" href="#" title="Indonesia sở hữu nguồn nguyên liệu lớn nhất thế giới để sản xuất pin xe điện">
-                                <img src="data/xehay-vf-060122-6111_result_%281%29.jpg" width="127" height="70" />
-                            </a>
-                            <p>
-                                Là quốc gia&nbsp;có sản lượng niken lớn nhất thế giới -&nbsp;nguyên liệu chính để sản xuất pin lithium-ion trên xe điện nên rõ ràng Indonesia&nbsp;được hưởng lợi rất nhiều khi xe điện ngày càng phát...
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                    <li>
-                        <a class="latest-home-item" href="#" title="Ford và Chevrolet gửi 100 xe ô tô đến hỗ trợ người dân Ukraine">Ford và Chevrolet gửi 100 xe ô tô đến hỗ trợ người dân Ukraine</a>
-                        <div class="home-news-item">
-                            <a class="latest-home-item" href="#" title="Ford và Chevrolet gửi 100 xe ô tô đến hỗ trợ người dân Ukraine">
-                                <img src="data/xehay-ford-05052022-1_result.jpg" width="127" height="70" />
-                            </a>
-                            <p>
-                                Ford và Chevrolet là hãng thương hiệu ô tô luôn nỗ lực để trợ giúp Ukraine. Sau khi quyên góp 100.000 USD (~ 2,29 tỷ VNĐ)&nbsp;vào đầu năm nay thì mới đây mỗi nhà sản xuất lại tiếp tục gửi 50 xe ô tô...
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                    <li>
-                        <a class="latest-home-item" href="#" title="Kia Sorento tại Việt Nam áp dụng giá mới: Trang bị giữ nguyên, chỉ thay logo mới">Kia Sorento tại Việt Nam áp dụng giá mới: Trang bị giữ nguyên, chỉ thay logo mới</a>
-                        <div class="home-news-item">
-                            <a class="latest-home-item" href="#" title="Kia Sorento tại Việt Nam áp dụng giá mới: Trang bị giữ nguyên, chỉ thay logo mới">
-                                <img src="data/xehay-kia_sorento_phev-200821-13.jpg" width="127" height="70" />
-                            </a>
-                            <p>
-                                Sau Toyota, Lexus và Mercedes-Benz, mới đây, Kia cũng đã điều chỉnh lại giá bán của một số dòng sản phẩm, trong đó, đáng chú ý nhất là việc tăng tới 70 triệu đồng đối với mẫu SUV&nbsp;Sorento.
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                    <li>
-                        <a class="latest-home-item" href="#" title="Lái xe Hyundai Santa Fe mất lái, gây tai nạn kinh hoàng ở TP. Thủ Đức">Lái xe Hyundai Santa Fe mất lái, gây tai nạn kinh hoàng ở TP. Thủ Đức</a>
-                        <div class="home-news-item">
-                            <a class="latest-home-item" href="#" title="Lái xe Hyundai Santa Fe mất lái, gây tai nạn kinh hoàng ở TP. Thủ Đức">
-                                <img src="data/xehay-tai-nan-06052022-8_result.jpg" width="127" height="70" />
-                            </a>
-                            <p>
-                                Vụ tai nạn kinh hoàng khiến nhiều người bị thương, trong đó có&nbsp;4 người bị thương nặng phải đi cấp cứu, nhiều&nbsp;xe máy đổ nát tại hiện trường và chiếc&nbsp;Hyundai Santa Fe cũng bị biến dạng.
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                    <li>
-                        <a class="latest-home-item" href="#" title="Mercedes-AMG G63 đúng chuẩn ">Mercedes-AMG G63 đúng chuẩn "dân chơi" với gói độ cực giới hạn Mansory Gronos Evo S P900</a>
-                        <div class="home-news-item">
-                            <a class="latest-home-item" href="#" title="Mercedes-AMG G63 đúng chuẩn ">
-                                <img src="data/xehay-g63-mansory-06052022-1_result.jpg" width="127" height="70" />
-                            </a>
-                            <p>
-                                Bản độ Mansory Gronos Evo S P900 của Mercedes-AMG G63 được chế tạo với số lượng vô cùng giới hạn, chỉ 10 chiếc trên toàn thế giới, chính vì vậy, giá của gói nâng cấp này là không hề rẻ.
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
+                    @foreach (Product product in Model.LastestProducts)
+                    {
+        <li>
+            <a class="latest-home-item" href="@product.GeneraSlugNews()" title="@product.Name">@product.Name</a>
+            <div class="home-news-item">
+                <a class="latest-home-item" href="@product.GeneraSlugNews()" title="@product.Name">
+                    <img src="@product.Image" width="127" height="70" />
+                </a>
+                <p>
+                    @product.Description
+                </p>
+            </div>
+            <div class="clearfix"></div>
+        </li>}
                     <div class="paginator">
                         <ul id="yw0" class="yiiPager">
 
@@ -310,9 +143,7 @@
                             <li class="page"><a href="#">6</a></li>
                             <li class="page"><a href="#">7</a></li>
                             <li class="page"><a href="#">8</a></li>
-
-
-                            <li class="next"><a href="#"><img src="data/arrow-right.png"></a></li>
+                            <li class="next"><a href="#"><img src="/Assets/client/data/arrow-right.png"></a></li>
                         </ul>
 
 
@@ -325,31 +156,22 @@
             <h2 class="title"><a href="#">Video</a></h2>
             <div class="list-items">
                 <div style="width: 300px; float: left;">
-                    <iframe style="position: relative" width="300" height="169" src="https://www.youtube-nocookie.com/embed/LynmuqEKhgk?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+                    <iframe style="position: relative" width="300" height="169" src="@Model.Videos.FirstOrDefault().Image" frameborder="0" allowfullscreen=""></iframe>
                     <div class="video-info">
-                        <a class="big-video-link home-item-small" href="#">[VIDEO] Đánh giá Subaru Forester (chỉ từ 899 triệu) từ người dùng: Không phô trương nhưng rất "cốt lõi"</a>
+                        <a class="big-video-link home-item-small" href="#">@Model.Videos.FirstOrDefault().Name</a>
                     </div>
                 </div>
                 <div class="video-other" style="width: 300px; float: left;">
                     <ul style="margin-top:0px;">
-                        <li style="list-style: none;">
-                            <a style="text-align: left; float: left; margin-bottom: 11px;" class="home-item-small" href="#" title="[VIDEO] Khám phá Mercedes-AMG C63 S Coupe 4.0L V8 - 510 mã lực">
-                                <img style="float:left; margin-right: 10px;" width="109" height="60" src="data/xehay-hl_mer_c_63_s-161219-1.jpg" alt="[VIDEO] Khám phá Mercedes-AMG C63 S Coupe 4.0L V8 - 510 mã lực">
-                                [VIDEO] Khám phá Mercedes-AMG C63 S Coupe 4.0L V8 - 510 mã lực
-                            </a>
-                        </li>
-                        <li style="list-style: none;">
-                            <a style="text-align: left; float: left; margin-bottom: 11px;" class="home-item-small" href="#" title="Sờ tận tay Lamborghini SIAN - Chi tiết thông tin bạn cần biết">
-                                <img style="float:left; margin-right: 10px;" width="109" height="60" src="data/review-sian-hunglam-1409.jpg" alt="Sờ tận tay Lamborghini SIAN - Chi tiết thông tin bạn cần biết">
-                                Sờ tận tay Lamborghini SIAN - Chi tiết thông tin bạn cần biết
-                            </a>
-                        </li>
-                        <li style="list-style: none;">
-                            <a style="text-align: left; float: left; margin-bottom: 11px;" class="home-item-small" href="#" title="Chi tiết Mercedes GLC 2020 facelift - SUV hạng sang được mong chờ nhất tại Việt Nam">
-                                <img style="float:left; margin-right: 10px;" width="109" height="60" src="data/xehay-mec-glc-review.jpg" alt="Chi tiết Mercedes GLC 2020 facelift - SUV hạng sang được mong chờ nhất tại Việt Nam">
-                                Chi tiết Mercedes GLC 2020 facelift - SUV hạng sang được mong chờ nhất tại Việt Nam
-                            </a>
-                        </li>
+                        @foreach (Product product in Model.Videos)
+                        {
+
+            <li style="list-style: none;">
+                <a style="text-align: left; float: left; margin-bottom: 11px;" class="home-item-small" href="#" title="@product.Name">
+                    <img style="float:left; margin-right: 10px;" width="109" height="60" src="@product.Image" alt="@product.Name">
+                    @product.Name
+                </a>
+            </li>}
                         <div class="clear"></div>
                     </ul>
                 </div>
@@ -391,162 +213,38 @@
                 });
             </script>
 
-
-            <div class="box home-one-big">
-                <h2 class="title"><a href="#">Ô tô mới</a></h2>
-                <div class="list-items">
-
-                    <div class="big-news">
-                        <a class="home-item" href="#" title="">
-                            "Lộ hàng" mẫu xe kế nhiệm của Pagani Huayra - Sẽ trình làng vào tháng 9 năm nay
-                        </a>
-                        <div class="home-news-item">
-                            <a class="home-item" href="#" title="https://xehay.vn/">
-                                <img src="~/Assets/client/data/xehay-pagani-c10-07052022-1_result.jpg" width="127" height="70" />
-                            </a>
-                            <p>
-                                Mẫu hypercar mới của Pagani sẽ mạnh hơn "thần gió" Huayra,&nbsp;công suất được dự đoán ở khoảng 880 mã lực và xe sẽ có nhiều tính năng mới.
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <ul>
-                        <li>
-                            <a class="home-item-small" href="#" title="Lộ diện Lexus LBX: Mẫu SUV cỡ nhỏ mới của Lexus sẽ chia sẻ khung gầm của Yaris Cross">Lộ diện Lexus LBX: Mẫu SUV cỡ nhỏ mới của Lexus sẽ chia sẻ khung gầm của Yaris Cross</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="#" title="New Mazda CX-8 2022 ra mắt Việt Nam, giá từ 1,079 tỷ đồng">New Mazda CX-8 2022 ra mắt Việt Nam, giá từ 1,079 tỷ đồng</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="#" title="Bản độ G63 địa hình 888 mã lực ">Bản độ G63 địa hình 888 mã lực "cực gắt" đến từ lò Brabus</a>
-                        </li>
-                    </ul>
-
-                </div>
+            @foreach (ProductCategory productCategory in Model.ListCategory.Where(x=>x.Products.Count>0))
+            {
+<div class="box home-one-big">
+    <h2 class="title"><a href="@productCategory.GeneraSlugCategory()">@productCategory.Name</a></h2>
+    <div class="list-items">
+        <div class="big-news">
+            <a class="home-item" href="#" title="">
+                @productCategory.Products.FirstOrDefault().Name
+            </a>
+            <div class="home-news-item">
+                <a class="home-item" href=" @productCategory.Products.FirstOrDefault().GeneraSlugNews()" title="@productCategory.Products.FirstOrDefault().Name">
+                    <img src="@productCategory.Products.FirstOrDefault().Image" width="127" height="70" />
+                </a>
+                <p>
+                    @productCategory.Products.FirstOrDefault().Description
+                </p>
             </div>
+            <div class="clearfix"></div>
+        </div>
+        <ul>
+            @foreach (Product product in productCategory.Products.Skip(1))
+            {
 
+<li>
+    <a class="home-item-small" href="@product.GeneraSlugNews()" title="@product.Name">@product.Name</a>
+</li>
+            }
+        </ul>
 
-            <div class="box home-one-big">
-                <h2 class="title"><a href="#">Đánh giá Ô tô</a></h2>
-                <div class="list-items">
+    </div>
+</div>}
 
-                    <div class="big-news">
-                        <a class="home-item" href="#" title="Toyota Corolla Altis 2022: Một mẫu xe Nhật rất khác">
-                            Toyota Corolla Altis 2022: Một mẫu xe Nhật rất khác
-                        </a>
-                        <div class="home-news-item">
-                            <a class="home-item" href="#" title="https://xehay.vn/Toyota Corolla Altis 2022: Một mẫu xe Nhật rất khác">
-                                <img src="data/xehay-toyota_altis-14042022-10.jpg" width="127" height="70" />
-                            </a>
-                            <p>Được làm mới toàn diện “từ trong ra ngoài” với thiết kế mới trẻ trung, nội thất tiện nghi, trang bị hiện đại với gói công nghệ an toàn chủ động TSS và cả động cơ hybrid tiết kiệm...</p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <ul>
-                        <li>
-                            <a class="home-item-small" href="#" title="[ĐÁNH GIÁ NHANH] Toyota Camry 2.0 Q 2022: “Công - thủ toàn diện”">[ĐÁNH GIÁ NHANH] Toyota Camry 2.0 Q 2022: “Công - thủ toàn diện”</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="#" title="Đánh giá Beijing U5 Plus: đẹp, rẻ, hiện đại nhưng rào cản không nhỏ">Đánh giá Beijing U5 Plus: đẹp, rẻ, hiện đại nhưng rào cản không nhỏ</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="#" title="Hyundai Creta - Đối thủ mạnh trong phân khúc">Hyundai Creta - Đối thủ mạnh trong phân khúc</a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-
-
-            <div class="box home-one-big">
-                <h2 class="title"><a href="#">Đánh giá Xe máy</a></h2>
-                <div class="list-items">
-
-                    <div class="big-news">
-                        <a class="home-item" href="#" title="[ĐÁNH GIÁ XE] Honda Winner X - bóc tách mẫu xe côn tay “kẻ chiến thắng”">
-                            [ĐÁNH GIÁ XE] Honda Winner X - bóc tách mẫu xe côn tay “kẻ chiến thắng”
-                        </a>
-                        <div class="home-news-item">
-                            <a class="home-item" href="#" title="https://xehay.vn/[ĐÁNH GIÁ XE] Honda Winner X - bóc tách mẫu xe côn tay “kẻ chiến thắng”">
-                                <img src="data/xehay-honda_winner_x-27012022-4.jpg" width="127" height="70" />
-                            </a>
-                            <p>
-                                Kể từ khi ra mắt cho tới nay, đã có hơn 550 ngàn chiếc Winner và Winner X được bán ra tại thị trường Việt Nam. Vậy tại sao Winner X lại được người dùng ưa chuộng?
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <ul>
-                        <li>
-                            <a class="home-item-small" href="#" title="Dat Bike Weaver 200 - Rất mạnh, nhưng vẫn có thể tốt hơn">Dat Bike Weaver 200 - Rất mạnh, nhưng vẫn có thể tốt hơn</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="#" title="Honda CBR 150R - Sự lựa chọn hoàn hảo để khởi đầu đam mê SportBike">Honda CBR 150R - Sự lựa chọn hoàn hảo để khởi đầu đam mê SportBike</a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-
-
-            <div class="box home-one-big">
-                <h2 class="title"><a href="#">Xe và Thợ</a></h2>
-                <div class="list-items">
-
-                    <div class="big-news">
-                        <a class="home-item" href="#" title="Xe quân đội Nga sử dụng bộ lốp hơn 30 năm từ thời Liên Xô trong cuộc chiến tranh với Ukraina">
-                            Xe quân đội Nga sử dụng bộ lốp hơn 30 năm từ thời Liên Xô trong cuộc chiến tranh với Ukraina
-                        </a>
-                        <div class="home-news-item">
-                            <a class="home-item" href="#" title="https://xehay.vn/Xe quân đội Nga sử dụng bộ lốp hơn 30 năm từ thời Liên Xô trong cuộc chiến tranh với Ukraina">
-                                <img src="data/xehay-xe_quan_su_nga-25042022-1.jpg" width="127" height="70" />
-                            </a>
-                            <p>Không rõ là do quân đội Nga đang phải đối mặt với tình trạng thiếu hụt trầm trọng quân nhu (rất khó xảy ra), hay đồ từ thời Liên Xô "dùng mãi không hỏng"; nhưng bộ lốp 31 năm có...</p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <ul>
-                        <li>
-                            <a class="home-item-small" href="#" title="Bản độ G63 địa hình 888 mã lực ">Bản độ G63 địa hình 888 mã lực "cực gắt" đến từ lò Brabus</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="#" title="Mercedes-AMG G63 đúng chuẩn ">Mercedes-AMG G63 đúng chuẩn "dân chơi" với gói độ cực giới hạn Mansory Gronos Evo S P900</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="#" title="Máy rửa xe Mazzoni - Bền bỉ và tiết kiệm là tiêu chí hàng đầu!">Máy rửa xe Mazzoni - Bền bỉ và tiết kiệm là tiêu chí hàng đầu!</a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-
-
-            <div class="box home-one-big  isnotmobile">
-                <h2 class="title"><a href="#">Bảng giá</a></h2>
-                <div class="list-items">
-
-                    <div class="big-news">
-                        <a class="home-item" href="#" title="Một loạt mẫu xe Lexus tại Việt Nam tăng giá, GX tăng tới 70 triệu đồng">
-                            Một loạt mẫu xe Lexus tại Việt Nam tăng giá, GX tăng tới 70 triệu đồng
-                        </a>
-                        <div class="home-news-item">
-                            <a class="home-item" href="#" title="https://xehay.vn/Một loạt mẫu xe Lexus tại Việt Nam tăng giá, GX tăng tới 70 triệu đồng">
-                                <img src="data/xehay-lexusgx-161121-1.jpg" width="127" height="70" />
-                            </a>
-                            <p>
-                                Kể từ ngày 1/5/2022,&nbsp;Lexus Việt Nam đã áp dụng mức giá mới cho nhiều dòng xe, bao gồm ES, RX, GX và cả LM.
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <ul>
-                        <li>
-                            <a class="home-item-small" href="#" title="VinFast Fadil ưu đãi 40 triệu đồng trong 10 ngày cuối tháng 4">VinFast Fadil ưu đãi 40 triệu đồng trong 10 ngày cuối tháng 4</a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
 
 
         </div>
@@ -554,125 +252,30 @@
             <div class="box home-one-big">
                 <h2 class="title"><a href="#">XEM NHIỀU NHẤT</a></h2>
                 <div class="list-items">
-
                     <div class="big-news">
-                        <a class="home-item" href="#" title="Chiêm ngưỡng Mercedes-Maybach S580 2022 kịch độc của ">
-                            Chiêm ngưỡng Mercedes-Maybach S580 2022 kịch độc của "người đứng sau" rapper Moneybagg Yo
+                        <a class="home-item" href="@Model.ProductViewMax.FirstOrDefault().GeneraSlugNews()" title="@Model.ProductViewMax.FirstOrDefault().Name">
+                            @Model.ProductViewMax.FirstOrDefault().Name
                         </a>
                         <div class="home-news-item">
-                            <a class="home-item" href="#" title="https://xehay.vn/Chiêm ngưỡng Mercedes-Maybach S580 2022 kịch độc của ">
-                                <img src="data/xehay-maybach_s580-25042022-5.jpg" width="127" height="70" />
+                            <a class="home-item" href="@Model.ProductViewMax.FirstOrDefault().GeneraSlugNews()" title="@Model.ProductViewMax.FirstOrDefault().Name">
+                                <img src="@Model.ProductViewMax.FirstOrDefault().Image" width="127" height="70" />
                             </a>
-                            <p>Đối với giới nghệ sĩ, những chiếc Maybach vừa sang trọng lại thoải mái - dường như đã trở thành&nbsp;một phương tiện di chuyển chuẩn mực. Chính vì thế mà&nbsp;Marcus Howell - chủ...</p>
+                            <p>@Model.ProductViewMax.FirstOrDefault().Description</p>
                         </div>
                         <div class="clearfix"></div>
                     </div>
                     <ul>
-                        <li>
-                            <a class="home-item-small" href="#" title="Nissan Terra 2022 sắp về Việt Nam: Quá nhiều sự thay đổi, liệu có tạo nên cơn sốt?">Nissan Terra 2022 sắp về Việt Nam: Quá nhiều sự thay đổi, liệu có tạo nên cơn sốt?</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="#" title="Điểm danh những tính năng công nghệ ấn tượng trên BMW 7-Series 2023">Điểm danh những tính năng công nghệ ấn tượng trên BMW 7-Series 2023</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="#" title="Đi ngược lại xu thế, Toyota vẫn kiên trì với động cơ đốt trong">Đi ngược lại xu thế, Toyota vẫn kiên trì với động cơ đốt trong</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="#" title="ZipCharge ra mắt trạm sạc điện di động cho ô tô, tương lai sẽ thay thế trạm sạc công cộng">ZipCharge ra mắt trạm sạc điện di động cho ô tô, tương lai sẽ thay thế trạm sạc công cộng</a>
-                        </li>
+                        @foreach (Product product in Model.ProductViewMax)
+                        {
+
+                    <li>
+                        <a class="home-item-small" href="@product.GeneraSlugNews()" title="@product.Name">@product.Name</a>
+                    </li>
+                }
                     </ul>
 
                 </div>
             </div>
-            <div class="box home-one-big">
-                <h2 class="title"><a href="#">Tư vấn</a></h2>
-                <div class="list-items">
-
-                    <div class="big-news">
-                        <a class="home-item" href="#" title="Máy rửa xe Mazzoni - Bền bỉ và tiết kiệm là tiêu chí hàng đầu!">
-                            Máy rửa xe Mazzoni - Bền bỉ và tiết kiệm là tiêu chí hàng đầu!
-                        </a>
-                        <div class="home-news-item">
-                            <a class="home-item" href="#" title="https://xehay.vn/Máy rửa xe Mazzoni - Bền bỉ và tiết kiệm là tiêu chí hàng đầu!">
-                                <img src="data/xehay-may_rua_xe_mazzoni_uni_viet_-04052022-5.jpg" width="127" height="70" />
-                            </a>
-                            <p>Với 100% thành phần cấu tạo, vật liệu và các chi tiết máy cấu thành được sản xuất và lắp ráp trực tiếp tại Italia cùng với hàm lượng công nghệ vượt trội, máy rửa xe Mazzoni đem...</p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <ul>
-                        <li>
-                            <a class="home-item-small" href="#" title="Trải nghiệm độ đèn cho Hyundai Santa Fe 2022 thế hệ mới">Trải nghiệm độ đèn cho Hyundai Santa Fe 2022 thế hệ mới</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="#" title="Trải nghiệm phim cách nhiệt Smith Club">Trải nghiệm phim cách nhiệt Smith Club</a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-
-            <div class="box home-one-big  isnotmobile">
-                <h2 class="title"><a href="#">Xe máy mới</a></h2>
-                <div class="list-items">
-
-                    <div class="big-news">
-                        <a class="home-item" href="#" title="Honda Super Cub 110 Pro 2022 trình làng, giá từ 61 triệu VNĐ">
-                            Honda Super Cub 110 Pro 2022 trình làng, giá từ 61 triệu VNĐ
-                        </a>
-                        <div class="home-news-item">
-                            <a class="home-item" href="#" title="https://xehay.vn/Honda Super Cub 110 Pro 2022 trình làng, giá từ 61 triệu VNĐ">
-                                <img src="data/xehay-honda_super_cub_110_pro_2022-250422-1.jpg" width="127" height="70" />
-                            </a>
-                            <p>
-                                Honda Super Cub 110 Pro 2022 được giới thiệu với một loạt các nâng cấp quan trọng như mô-men xoắn lớn hơn, phanh đĩa trước có ABS và màn hình LCD được làm mới.
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <ul>
-                        <li>
-                            <a class="home-item-small" href="#" title="VinFast ra mắt 5 mẫu xe máy điện có khả năng di chuyển gần 200 km/lần sạc, giá từ 22 triệu đồng">VinFast ra mắt 5 mẫu xe máy điện có khả năng di chuyển gần 200 km/lần sạc, giá từ 22 triệu đồng</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="#" title="Honda Hawk 11 trình làng - Mẫu Cafe Racer sở hữu phong cách đến từ tương lai">Honda Hawk 11 trình làng - Mẫu Cafe Racer sở hữu phong cách đến từ tương lai</a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-
-            <div class="box home-one-big  isnotmobile">
-                <h2 class="title"><a href="#">Giải trí</a></h2>
-                <div class="list-items">
-
-                    <div class="big-news">
-                        <a class="home-item" href="#" title="Chiêm ngưỡng một trong những chiếc McLaren 765LT được cá nhân hóa ">
-                            Chiêm ngưỡng một trong những chiếc McLaren 765LT được cá nhân hóa "khủng" nhất trên thế giới
-                        </a>
-                        <div class="home-news-item">
-                            <a class="home-item" href="#" title="https://xehay.vn/Chiêm ngưỡng một trong những chiếc McLaren 765LT được cá nhân hóa ">
-                                <img src="~/Assets/client/data/xehay-mclaren-765lt-08052022-7_result.jpg" width="127" height="70" />
-                            </a>
-                            <p>
-                                Mỗi tùy chọn trên chiếc&nbsp;McLaren 765LT này đều giúp nâng cao "phẩm giá" của siêu xe,&nbsp;chiếc xe trở nên vô cùng khác biệt, độc đáo và cuốn hút.
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <ul>
-                        <li>
-                            <a class="home-item-small" href="#" title="Lamborghini Huracan độ bodykit ">Lamborghini Huracan độ bodykit "hàng khủng" từng của doanh nhân Nguyễn Quốc Cường tái xuất</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="#" title="Đại gia Quảng Ninh ">Đại gia Quảng Ninh "chia tay" Mercedes-AMG G63 độ Brabus 800 sau một tháng về chung nhà</a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-
-
             <div class="box home-video">
                 <h2 class="title">
                     <a href="#" title="Video">XE HAY TV</a>
@@ -687,16 +290,7 @@
 
                 </div>
             </div>
-
-
-
         </div>
-
     </div>
-
-
-
-
-
     <div class="clear"></div>
 </div>
