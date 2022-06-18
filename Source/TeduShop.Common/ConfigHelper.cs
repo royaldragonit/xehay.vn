@@ -13,5 +13,8 @@ namespace TeduShop.Common
         {
             return ConfigurationManager.AppSettings[key].ToString();
         }
+        public const string SiteUrl = "http://xiposg.vn";
+        public const string SiteName = "xiposg.vn";
+        public const string SiteUrlHttps = "https://xiposg.vn";
     }
 }

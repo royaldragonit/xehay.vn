@@ -1,36 +1,44 @@
-﻿<!DOCTYPE html>
+﻿@using TeduShop.Common;
+<!DOCTYPE html>
 <html class="no-js" lang="vi" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" itemscope="itemscope" itemtype="http://schema.org/WebPage">
-<html lang="vi">
 <head>
     <meta charset="UTF-8" />
-    <title>Xe Hay</title>
-    <link rel="stylesheet" href="css/pager.css" />
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.yiiactiveform.js"></script>
+    <link rel="stylesheet" href="/Assets/client/css/pager.css" />
+    <script type="text/javascript" src="/Assets/client/js/jquery.min.js"></script>
+    <title>@ViewBag.Title</title>
+    <meta name="keywords" content="@ViewBag.MetaKeyword">
+    <meta name="description" content="@ViewBag.MetaDescription">
+    <meta name="author" content="@ConfigHelper.SiteName" />
+    <!-- Open Graph data -->
+    <meta property="og:site_name" content="@ConfigHelper.SiteName" />
+    <meta property="og:type" content="Website" />
+    <meta property="og:locale" content="vi_VN" />
 
+    @*<meta property="fb:app_id" content="1614260038822406" />*@
+    @*<meta property="fb:pages" content="445089142275655" />*@
+    <!--<meta property="fb:admins" content="100005111372125" />-->
+
+    <meta property="og:title" name="title" content="@ViewBag.Title" />
+    <meta property="og:description" content="@ViewBag.MetaDescription" />
+    <meta property="og:url" content="@ViewBag.MetaUrl" />
+    <meta property="og:image" content="@ViewBag.MetaImage" />
+    <!-- HOME_INDEX -->
+
+
+    <meta property="og:site_name" content="@ConfigHelper.SiteName" />
+    <meta content='@ConfigHelper.SiteName' name='Author' />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-language" content="vi-vn" />
+    <meta http-equiv="cleartype" content="on" />
 
     <link rel="stylesheet" href="~/Assets/client/css/normalize.min.css" />
     <link rel="stylesheet" href="~/Assets/client/css/main.v4.min.css" />
-    <link rel="stylesheet" href="~/Assets/client/css/xehay.v52.min.css" />
-    <link rel="stylesheet" href="~/Assets/client/css/mobile.xehay.rev80.min.css" />
+    <link rel="stylesheet" href="~/Assets/client/css/xiposg.v52.min.css" />
+    <link rel="stylesheet" href="~/Assets/client/css/mobile.xiposg.rev80.min.css" />
     <link rel="stylesheet" href="~/Assets/client/css/font-awesome.min.css" />
     <link rel="stylesheet" href="~/Assets/client/css/colorbox.css" />
-
-
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.cookie.min.js"></script>
-    <script src="js/helper.min.js"></script>
-    <script src="js/jquery.dotdotdot.min.js"></script>
-    <script src="js/detect.min.js"></script>
-    <script src="js/main.v5.min.js"></script>
-
-    <script src="js/jquery.colorbox-min.js"></script>
-
-    <script src="js/platform.js"></script>
-
-
-
-
     <script type="text/javascript">
         function scrollDownPage() {
             var scr_height = screen.availHeight;
@@ -52,9 +60,9 @@
     </script>
 
 
-    <link href="css/video-js.v5.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Assets/client/css/video-js.v5.min.css" rel="stylesheet" type="text/css" />
 
-    <script src="js/video.dev.min.js"></script>
+    <script src="~/Assets/client/js/video.dev.min.js"></script>
 
     <script>
         videojs.options.flash.swf = "/videojs/video-js.swf";
@@ -79,13 +87,11 @@
         <span class="vclose" style="color: #fff; padding-right: 8px; cursor: pointer; line-height: 25px;" title="Đóng Video này" id="btnclose">Đóng</span>
 
     </div>
-    </div>
-
 
 
 </head>
 
-<body class="xehay">
+<body class="xiposg">
     <div class="container">
         @{Html.RenderAction("HeaderXipo", "Home");}
         @RenderBody()
@@ -149,28 +155,6 @@
             });
         }, 500);
     </script>
-
-
-
-
-    <script type="text/javascript">
-        setTimeout(function () {
-            var isiPad = navigator.userAgent.match(/iPad/i) != null;
-            if (!FlashDetect.installed) {
-                $('.no-flash').css({
-                    display: 'block'
-                });
-                $('.track-impression').attr('src', 'https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=19&mc=imp&pli=15736740&PluID=0&ord=[timestamp]&rtu=-1');
-                $('.track-impression').attr('src', 'https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=19&mc=imp&pli=16254372&PluID=0&ord=[timestamp]&rtu=-1');
-                $('.richmedia, .richmedia-flash, .flash').css({
-                    display: 'none'
-                });
-            }
-        }, 500);
-    </script>
-
-
-
 
     <div style='display:none'>
         <div id='inline_content' style='padding:10px; background:#fff;'>

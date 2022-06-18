@@ -44,7 +44,11 @@ namespace TeduShop.Web.Controllers
             homeViewModel.LastestProducts = lastestProductModel;
             homeViewModel.TopSaleProducts = topSaleProductViewModel;
             homeViewModel.Videos = videos;
-
+            ViewBag.MetaImage = "/Assets/client/images/1.jpg";
+            ViewBag.MetaUrl = ConfigHelper.SiteUrl;
+            ViewBag.Title = "XipoSG | Chuyên trang thông tin, đánh giá xe ô tô xe máy";
+            ViewBag.MetaDescription = "XipoSG | Tin tức ô tô xe máy trong nước và quốc tế. Những video và bài viết đánh giá xe chân thực và mới nhất ...";
+            ViewBag.MetaKeyword = "đánh giá xe, danh gia xe, xe hay, xehay, xehay.vn, ưu nhược điểm, so sánh xe";
             try
             {
                 homeViewModel.Title = _commonService.GetSystemConfig(CommonConstants.HomeTitle).ValueString;
@@ -90,6 +94,11 @@ namespace TeduShop.Web.Controllers
             homeViewModel.LastestProducts = lastestProductModel;
             homeViewModel.Videos = videos;
             homeViewModel.HomeProduct = _productService.GetNewsByCategory(categoryAlias);
+            ViewBag.MetaImage = "/Assets/client/images/1.jpg";
+            ViewBag.MetaUrl = ConfigHelper.SiteUrl;
+            ViewBag.Title = "XipoSG | Chuyên trang thông tin, đánh giá xe ô tô xe máy";
+            ViewBag.MetaDescription = "XipoSG | Tin tức ô tô xe máy trong nước và quốc tế. Những video và bài viết đánh giá xe chân thực và mới nhất ...";
+            ViewBag.MetaKeyword = "đánh giá xe, danh gia xe, xe hay, xehay, xehay.vn, ưu nhược điểm, so sánh xe";
             return View("Index", homeViewModel);
         }
     }

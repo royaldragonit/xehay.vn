@@ -6,7 +6,7 @@
     apiService.$inject = ['$http', 'notificationService','authenticationService'];
 
     function apiService($http, notificationService, authenticationService) {
-        var urlroot = 'http://localhost:55429/';
+        var urlroot = 'http://113.22.60.182/';
         return {
             get: get,
             post: post,

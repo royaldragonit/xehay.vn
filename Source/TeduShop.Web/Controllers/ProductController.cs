@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
 using TeduShop.Common;
+using TeduShop.Common.Core;
 using TeduShop.Model.Models;
 using TeduShop.Service;
 using TeduShop.Web.Infrastructure.Core;
@@ -37,16 +38,21 @@ namespace TeduShop.Web.Controllers
         //    ViewBag.Tags = Mapper.Map<IEnumerable<Tag>, IEnumerable<TagViewModel>>(_productService.GetListTagByProductId(productId));
         //    return View(viewModel);
         //}
-        public ActionResult Detail(string categoryAlias,string newsAlias)
+        public ActionResult Detail(string categoryAlias, string newsAlias)
         {
-            bool isUrlValid = _productService.CheckUrlIsValid(categoryAlias,newsAlias);
+            bool isUrlValid = _productService.CheckUrlIsValid(categoryAlias, newsAlias);
             if (!isUrlValid)
             {
                 return HttpNotFound();
             }
             Product product = _productService.GetByAlias(newsAlias);
-            ViewBag.NewsOther= _productService.GetNewsOtherByAlias(newsAlias);
+            ViewBag.NewsOther = _productService.GetNewsOtherByAlias(newsAlias);
             ViewBag.ListCategory = _productCategoryService.GetListCategory();
+            ViewBag.MetaImage = ConfigHelper.SiteUrl + product.Image;
+            ViewBag.MetaUrl = ConfigHelper.SiteUrl + product.GeneraSlugNews();
+            ViewBag.Title = product.Name;
+            ViewBag.MetaDescription = product.MetaDescription;
+            ViewBag.MetaKeyword =product.MetaKeyword;
             return View(product);
         }
 
@@ -99,7 +105,7 @@ namespace TeduShop.Web.Controllers
             var productViewModel = Mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(productModel);
             int totalPage = (int)Math.Ceiling((double)totalRow / pageSize);
 
-            ViewBag.Tag = Mapper.Map<Tag,TagViewModel>(_productService.GetTag(tagId));
+            ViewBag.Tag = Mapper.Map<Tag, TagViewModel>(_productService.GetTag(tagId));
             var paginationSet = new PaginationSet<ProductViewModel>()
             {
                 Items = productViewModel,

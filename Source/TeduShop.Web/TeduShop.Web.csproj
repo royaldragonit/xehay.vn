@@ -4955,13 +4955,13 @@
     <Content Include="Assets\client\css\font-awesome.min.css" />
     <Content Include="Assets\client\css\form.css" />
     <Content Include="Assets\client\css\main.v4.min.css" />
-    <Content Include="Assets\client\css\mobile.xehay.rev80.min.css" />
+    <Content Include="Assets\client\css\mobile.xiposg.rev80.min.css" />
     <Content Include="Assets\client\css\normalize.min.css" />
     <Content Include="Assets\client\css\pager.css" />
     <Content Include="Assets\client\css\popup.css" />
     <Content Include="Assets\client\css\style.css" />
     <Content Include="Assets\client\css\video-js.v5.min.css" />
-    <Content Include="Assets\client\css\xehay.v52.min.css" />
+    <Content Include="Assets\client\css\xiposg.v52.min.css" />
     <Content Include="Assets\client\data\1000x120.jpg" />
     <Content Include="Assets\client\data\26-4-1000x220.jpg" />
     <Content Include="Assets\client\data\26-4-300x250.jpg" />
@@ -5037,6 +5037,7 @@
     <Content Include="Assets\client\font-awesome-4.6.3\css\font-awesome.min.css" />
     <Content Include="Assets\client\font-awesome-4.6.3\fonts\fontawesome-webfont.svg" />
     <Content Include="Assets\client\font-awesome-4.6.3\HELP-US-OUT.txt" />
+    <Content Include="Assets\client\images\1.jpg" />
     <Content Include="Assets\client\images\a-star.png" />
     <Content Include="Assets\client\images\arrow1.png" />
     <Content Include="Assets\client\images\arrow2.png" />
@@ -5129,6 +5130,7 @@
     <Content Include="Assets\client\js\jquery.flexisel.js" />
     <Content Include="Assets\client\js\jquery.min.js" />
     <Content Include="Assets\client\js\jquery.wmuSlider.js" />
+    <Content Include="Assets\client\js\video.dev.min.js" />
     <Content Include="Assets\client\template\contact_template.html" />
     <Content Include="Assets\client\template\newuser.html" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -5161,7 +5163,6 @@
     <Content Include="Assets\admin\libs\angular-ui-select\dist\select.min.css.map" />
     <Content Include="Assets\admin\libs\angular-ui-select\dist\select.min.js.map" />
     <Content Include="Assets\admin\libs\angular-ui-select\LICENSE" />
-    <Content Include="Assets\admin\libs\angular-ui-select\npm-debug.log" />
     <Content Include="Assets\admin\libs\angular-ui-select\package.json" />
     <Content Include="Assets\admin\libs\angular-ui-select\README.md" />
     <Content Include="Assets\admin\templates\ProductImportTemplate.xlsx" />
@@ -5183,6 +5184,10 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="UploadedFiles\images\xehay-Mazda3 2022-230522-11.jpg" />
+    <Content Include="UploadedFiles\images\xehay-Mercedes-Benz-230522-1%281%29.jpg" />
+    <Content Include="UploadedFiles\_thumbs\Images\xehay-Mazda3 2022-230522-11.jpg" />
+    <Content Include="UploadedFiles\_thumbs\Images\xehay-Mercedes-Benz-230522-1%281%29.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -5205,8 +5210,9 @@
     <Folder Include="app\shared\navigation\" />
     <Folder Include="Assets\admin\js\pages\" />
     <Folder Include="Assets\admin\libs\checklist-model\test\" />
+    <Folder Include="Assets\admin\libs\mustache\bin\" />
     <Folder Include="Reports\" />
-    <Folder Include="UploadedFiles\" />
+    <Folder Include="UploadedFiles\files\" />
     <Folder Include="Views\About\" />
     <Folder Include="Views\Post\" />
   </ItemGroup>
@@ -5479,9 +5485,6 @@
     <Content Include="Resources\bigshope-web.zip" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\client\images\Thumbs.db" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -5538,7 +5541,6 @@
     <Content Include="Assets\admin\libs\jquery-ui\composer.json" />
     <Content Include="Assets\admin\libs\jquery-ui\package.json" />
     <Content Include="Assets\admin\libs\jquery-ui\README.md" />
-    <Content Include="Assets\admin\libs\jquery-ui\ui\.DS_Store" />
     <Content Include="Assets\admin\libs\jquery-ui\ui\.jshintrc" />
   </ItemGroup>
   <ItemGroup>
@@ -5567,7 +5569,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\admin\libs\mustache\.bower.json" />
-    <Content Include="Assets\admin\libs\mustache\bin\mustache" />
     <Content Include="Assets\admin\libs\mustache\bower.json" />
     <Content Include="Assets\admin\libs\mustache\CHANGELOG.md" />
     <Content Include="Assets\admin\libs\mustache\hooks\install-hooks.sh" />
