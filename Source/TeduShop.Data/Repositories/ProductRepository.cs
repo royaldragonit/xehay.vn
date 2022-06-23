@@ -5,6 +5,7 @@ using TeduShop.Data.Infrastructure;
 using TeduShop.Model.Models;
 using System.Data.Entity;
 using System.Linq;
+using System.Data.SqlClient;
 
 namespace TeduShop.Data.Repositories
 {
@@ -19,6 +20,7 @@ namespace TeduShop.Data.Repositories
         bool CheckUrlIsValid(string categoryAlias, string newsAlias);
         Product GetByAlias(string newsAlias);
         List<Product> GetNewsOtherByAlias(string newsAlias);
+        List<Tag> ListTags(string listTags);
     }
 
     public class ProductRepository : RepositoryBase<Product>, IProductRepository
@@ -96,6 +98,17 @@ namespace TeduShop.Data.Repositories
             var data = DbContext.Products.OrderByDescending(x => x.ViewCount)
                                          .Include(x => x.ProductCategory)
                                          .Take(12).ToList();
+            return data;
+        }
+
+        public List<Tag> ListTags(string newsAlias)
+        {
+            return XP_GetListTags(newsAlias);
+        }
+        private List<Tag> XP_GetListTags(string newsAlias)
+        {
+            var newsAliasParams = new SqlParameter("@newsAlias", newsAlias);
+           var data= DbContext.Database.SqlQuery<Tag>("exec XP_GetListTags @newsAlias", newsAliasParams).ToList();
             return data;
         }
     }

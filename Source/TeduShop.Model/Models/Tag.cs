@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TeduShop.Model.Models
@@ -18,5 +19,6 @@ namespace TeduShop.Model.Models
         [MaxLength(50)]
         [Required]
         public string Type { set; get; }
+        public virtual ICollection<ProductTag> ProductTags { set; get; }
     }
 }

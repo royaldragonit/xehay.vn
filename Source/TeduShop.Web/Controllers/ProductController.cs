@@ -47,6 +47,10 @@ namespace TeduShop.Web.Controllers
             }
             Product product = _productService.GetByAlias(newsAlias);
             ViewBag.NewsOther = _productService.GetNewsOtherByAlias(newsAlias);
+            ViewBag.Tags = _productService.ListTags(newsAlias);
+            var videos = _productService.GetVideos();
+            ViewBag.Videos = videos;
+            ViewBag.News = _productService.GetLastest()?.Take(10);
             ViewBag.ListCategory = _productCategoryService.GetListCategory();
             ViewBag.MetaImage = ConfigHelper.SiteUrl + product.Image;
             ViewBag.MetaUrl = ConfigHelper.SiteUrl + product.GeneraSlugNews();

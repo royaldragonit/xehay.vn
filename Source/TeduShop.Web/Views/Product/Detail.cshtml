@@ -163,17 +163,18 @@
                     </div>
 
                 </div>
-
+@{ 
+    List<Tag> lstTags = ViewBag.Tags as List<Tag>;
+}
                 <!-- TAG -->
-                <div class="news-tag">
-                    <span>Tags:</span>
-                    <a href="/tag/lamborghini">Lamborghini</a>&nbsp;&nbsp;
-                    <a href="/tag/lamborghini-urus">Lamborghini Urus</a>&nbsp;&nbsp;
-                    <a href="/tag/suv">SUV </a>&nbsp;&nbsp;
-                    <a href="/tag/sieu-xe-the-thao">siêu xe thể thao</a>&nbsp;&nbsp;
-                    <a href="/tag/lamborghini-urus-evo">Lamborghini Urus Evo</a>&nbsp;&nbsp;
-                    <a href="/tag/mau-xe-ban-chay-nhat">mẫu xe bán chạy nhất</a>&nbsp;&nbsp;
-                </div>
+            <div class="news-tag">
+                <span>Tags:</span>
+                @foreach (Tag tag in lstTags)
+                {
+                    <a href="@Url.Content("/tag/"+tag.Name)">@tag.Name</a>
+                    <span>&nbsp; &nbsp;</span>
+                }
+            </div>
                 <!-- END TAG -->
 
                 <div style="width: 100%; max-width: 500px; margin: 0px auto">
@@ -429,109 +430,96 @@
                 </div>
             </div>
 
-
-
-            <div class="box home-one-big  isnotmobile ">
-                <h2 class="title"><a href="/tin-tuc">Tin tức</a></h2>
-                <div class="list-items">
-
-                    <div class="big-news">
-                        <a class="home-item" href="https://xiposg.vn/dieu-ky-la-o-cuoc-thi-xe-bay-noi-nhung-dan-choi-tro-tai-pha-xe.html" title="Điều kỳ lạ ở cuộc thi " xe="" bay"="" -="" nơi="" những="" "dân=" " chơi" ="" trổ="" tài="" "phá=" " xe" "=" ">
-                                        Điều kỳ lạ ở cuộc thi " xe bay" - Nơi những "dân chơi" trổ tài "phá xe"
+            @{
+                List<Product> lstNews = ViewBag.News as List<Product>;
+                if (lstNews.Count > 0)
+                {
+                    <div class="box home-one-big  isnotmobile ">
+                        <h2 class="title"><a href="/tin-tuc">Tin tức</a></h2>
+                        <div class="list-items">
+                            <div class="big-news">
+                                            <a class="home-item" href="@lstNews.FirstOrDefault().GeneraSlugNews()">
+                                                @lstNews.FirstOrDefault().Name
+                                            </a>
+                                <div class="home-news-item">
+                                    <a class="home-item" href="@lstNews.FirstOrDefault().GeneraSlugNews()">
+                                        <img src="@lstNews.FirstOrDefault().Image" width="127" height="70">
                                     </a>
-                        <div class="home-news-item">
-                            <a class="home-item" href="https://xiposg.vn/dieu-ky-la-o-cuoc-thi-xe-bay-noi-nhung-dan-choi-tro-tai-pha-xe.html" title="https://xiposg.vn/Điều kỳ lạ ở cuộc thi " xe="" bay"="" -="" nơi="" những="" "dân=" " chơi" ="" trổ="" tài="" "phá=" " xe" "=" ">
-                                <img src="/uploads/thumb/127x70/xiposg-xe-bay-09062022-1_result.jpg" width="127" height="70">
-                            </a>
-                            <p>
-                                Ở cuộc thi "xe bay", dù chiến thắng hay thua cuộc thì những chiếc xe tham gia đều kết thúc ở tình trạng hỏng hóc nặng nề, thậm chí là không thể sửa chữa nữa.
-                            </p>
+                                    <p>
+                                        @lstNews.FirstOrDefault().Description
+                                    </p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <ul>
+                                @foreach (var item in lstNews.Skip(1))
+                                {
+                                    <li>
+                                        <a class="home-item-small" href="@item.GeneraSlugNews()" title="@item.Name">@item.Name</a>
+                                    </li>
+                                }                                
+                            </ul>
+
                         </div>
-                        <div class="clearfix"></div>
                     </div>
-                    <ul>
-                        <li>
-                            <a class="home-item-small" href="https://xiposg.vn/bao-lu-can-quet-duong-pho-my-xe-o-to-nam-la-liet-giua-vung-nuoc-sau.html" title="Bão lũ càn quét đường phố Mỹ, xe ô tô nằm la liệt giữa vùng nước sâu">Bão lũ càn quét đường phố Mỹ, xe ô tô nằm la liệt giữa vùng nước sâu</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="https://xiposg.vn/ky-luc-the-gioi-xay-duong-cao-toc-dai-75-km-chi-trong-5-ngay-thuoc-ve-an-do.html" title="Kỷ lục thế giới xây đường cao tốc dài 75 km chỉ trong 5 ngày thuộc về Ấn Độ">Kỷ lục thế giới xây đường cao tốc dài 75 km chỉ trong 5 ngày thuộc về Ấn Độ</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="https://xiposg.vn/chiem-nguong-bo-suu-tap-xe-tri-gia-hang-chuc-ty-dong-cua-hot-girl-9x.html" title="Chiêm ngưỡng bộ sưu tập xe trị giá hàng chục tỷ đồng của hot girl 9x">Chiêm ngưỡng bộ sưu tập xe trị giá hàng chục tỷ đồng của hot girl 9x</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="https://xiposg.vn/suv-co-lon-toyota-sequoia-2023-ra-mat-muc-gia-khoi-diem-tu-1-35-ty-vnd.html" title="SUV cỡ lớn Toyota Sequoia 2023 ra mắt, mức giá khởi điểm từ 1,35 tỷ VNĐ">SUV cỡ lớn Toyota Sequoia 2023 ra mắt, mức giá khởi điểm từ 1,35 tỷ VNĐ</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="https://xiposg.vn/truoc-gio-g-kia-sportage-2022-lo-gia-ban-tai-viet-nam-ban-cao-nhat-la-1-1-ty-dong.html" title="Trước giờ G, Kia Sportage 2022 lộ full giá bán tại Việt Nam, bản cao nhất là 1,1 tỷ đồng">Trước giờ G, Kia Sportage 2022 lộ full giá bán tại Việt Nam, bản cao nhất là 1,1 tỷ đồng</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="https://xiposg.vn/de-xuat-giam-toc-do-toi-da-trong-do-thi-xuong-tu-60km-h-xuong-con-50km-h.html" title="Đề xuất " giảm="" tốc="" độ="" tối="" đa="" trong="" đô="" thị="" xuống="" từ="" 60km="" h="" còn="" 50km="" h""="">Đề xuất "Giảm tốc độ tối đa trong đô thị xuống từ 60km/h xuống còn 50km/h"</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="https://xiposg.vn/vinfast-cong-bo-chinh-sach-co-dinh-gia-thue-pin-o-to-dien-tai-viet-nam.html" title="VinFast công bố chính sách cố định giá thuê pin ô tô điện tại Việt Nam">VinFast công bố chính sách cố định giá thuê pin ô tô điện tại Việt Nam</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="https://xiposg.vn/ca-si-tuan-hung-tiep-tuc-ban-xe-lan-nay-la-sieu-mo-to-v-rex-travertson-vua-mua-dau-nam-nay.html" title="Ca sĩ Tuấn Hưng tiếp tục bán xe, lần này là siêu mô tô V-Rex Travertson vừa mua đầu năm nay">Ca sĩ Tuấn Hưng tiếp tục bán xe, lần này là siêu mô tô V-Rex Travertson vừa mua đầu năm nay</a>
-                        </li>
-                        <li>
-                            <a class="home-item-small" href="https://xiposg.vn/le-cong-bo-chuong-trinh-xep-xe-ky-luc-hinh-ban-do-viet-nam.html" title="Lễ công bố Chương trình Xếp xe kỷ lục hình bản đồ Việt Nam">Lễ công bố Chương trình Xếp xe kỷ lục hình bản đồ Việt Nam</a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-            @foreach (ProductCategory item in listCategory.Where(x=>x.Products.Count>0))
-            {
-        <div class="box home-one-big  isnotmobile ">
-            <h2 class="title"><a href="@item.GeneraSlugCategory()">@item.Name</a></h2>
-            <div class="list-items">
-
-                <div class="big-news">
-                    <a class="home-item" href=" @item.Products.FirstOrDefault().GeneraSlugNews()" title=" @item.Products.FirstOrDefault().Name">
-                        @item.Products.FirstOrDefault().Name
-                    </a>
-                    <div class="home-news-item">
-                        <a class="home-item" href=" @item.Products.FirstOrDefault().GeneraSlugNews()" title=" @item.Products.FirstOrDefault().Name">
-                            <img src=" @item.Products.FirstOrDefault().Image" width="127" height="70">
-                        </a>
-                        <p>@item.Description</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <ul>
-                    @foreach (Product product in item.Products)
-                    {
-                <li>
-                    <a class="home-item-small" href="@product.GeneraSlugNews()" title="@product.Name">@product.Name</a>
-                </li>
+                }
             }
-                </ul>
+            @foreach (ProductCategory item in listCategory.Where(x => x.Products.Count > 0))
+            {
+                <div class="box home-one-big  isnotmobile ">
+                    <h2 class="title"><a href="@item.GeneraSlugCategory()">@item.Name</a></h2>
+                    <div class="list-items">
 
-            </div>
-        </div>
-    }
-
-            <div class="box home-video " style="position: relative; top: auto; left: 0px;">
-                <h2 class="title">
-                    <a href="/video/xe-hay-tv-308" title="Video">XipoSG TV</a>
-                </h2>
-                <div class="list-items">
-                    <iframe style="position: relative" width="300" height="169" src="https://www.youtube-nocookie.com/embed/ZyGFVd4gSTw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
-                    <div class="video-info">
-                        <a class="big-video-link home-item-small" href="/video/detail/video-cuc-pham-pagani-huayra-bc-roadster-chiec-dau-tien-tai-chau-a-co-tien-chua-chac-mua-duoc">[VIDEO] Cực phẩm Pagani Huayra BC Roadster: Chiếc đầu tiên tại châu Á, có tiền chưa chắc mua được</a>
+                        <div class="big-news">
+                            <a class="home-item" href=" @item.Products.FirstOrDefault().GeneraSlugNews()" title=" @item.Products.FirstOrDefault().Name">
+                                @item.Products.FirstOrDefault().Name
+                            </a>
+                            <div class="home-news-item">
+                                <a class="home-item" href=" @item.Products.FirstOrDefault().GeneraSlugNews()" title=" @item.Products.FirstOrDefault().Name">
+                                    <img src=" @item.Products.FirstOrDefault().Image" width="127" height="70">
+                                </a>
+                                <p>@item.Description</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
                         <ul>
-                            <li>
-                                <a class="home-item-small" href="/video/detail/video-danh-gia-hyundai-ioniq-5-pin-xe-nay-trau-that" title="[VIDEO] Đánh giá Hyundai IONIQ 5: Pin xe này " trâu"="" thật...!"="">[VIDEO] Đánh giá Hyundai IONIQ 5: Pin xe này "trâu" thật...!</a>
-                            </li>
-                            <li>
-                                <a class="home-item-small" href="/video/detail/video-danh-gia-toyota-camry-2022-khong-con-la-xe-nganh" title="[VIDEO] Đánh giá Toyota Camry 2022: Không còn là xe... NGÀNH!">[VIDEO] Đánh giá Toyota Camry 2022: Không còn là xe... NGÀNH!</a>
-                            </li>
+                            @foreach (Product product in item.Products)
+                            {
+                                <li>
+                                    <a class="home-item-small" href="@product.GeneraSlugNews()" title="@product.Name">@product.Name</a>
+                                </li>
+                            }
                         </ul>
-                    </div>
 
+                    </div>
                 </div>
-            </div>
+            }
+            @{
+                var video = ViewBag.Videos as List<Product>;
+            }
+            @if (video != null && video.Count > 0)
+            {
+                <div class="box home-video " style="position: relative; top: auto; left: 0px;">
+                    <h2 class="title">
+                        <a href="@video.FirstOrDefault().GeneraSlugNews()" title="Video">@video.FirstOrDefault().Name</a>
+                    </h2>
+                    <div class="list-items">
+                        <iframe style="position: relative" width="300" height="169" src="https://www.youtube-nocookie.com/embed/ZyGFVd4gSTw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+                        <div class="video-info">
+                            <a class="big-video-link home-item-small" href="@video.FirstOrDefault().Name">@video.FirstOrDefault().Name</a>
+                            <ul>
+                                @foreach (var item in video.Skip(1))
+                                {
+                                    <li>
+                                        <a class="home-item-small" href="@item.GeneraSlugNews()" title="@item.Name">@item.Name</a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            }
 
 
         </div>

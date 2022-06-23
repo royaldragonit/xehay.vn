@@ -55,6 +55,7 @@ namespace TeduShop.Service
         List<Product> GetNewsByCategory(string categoryAlias);
         Product GetByAlias(string newsAlias);
         List<Product> GetNewsOtherByAlias(string newsAlias);
+        List<Tag> ListTags(string newsAlias);
     }
 
     public class ProductService : IProductService
@@ -316,6 +317,11 @@ namespace TeduShop.Service
         public List<Product> GetNewsOtherByAlias(string newsAlias)
         {
             return _productRepository.GetNewsOtherByAlias(newsAlias);
+        }
+
+        public List<Tag> ListTags(string newsAlias)
+        {
+            return _productRepository.ListTags(newsAlias);
         }
     }
 }
